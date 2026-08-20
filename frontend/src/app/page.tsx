@@ -125,19 +125,6 @@ export default function HomePage() {
                 {t.threeSections.section1.desc}
               </p>
             </div>
-
-            {/* Industrial CTA Block */}
-            <div className="pt-2 space-y-3">
-              <a 
-                href="tel:+998919517335" 
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black text-sm uppercase tracking-wider transition-all duration-200 hover:translate-x-1.5 shadow-lg shadow-blue-600/30 group"
-              >
-                Loyihani Boshlash <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <p className="text-xs font-mono text-slate-400">
-                3 bosqich · ~2 daqiqa maslahat · Oldindan to'lovsiz
-              </p>
-            </div>
           </div>
 
           {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
