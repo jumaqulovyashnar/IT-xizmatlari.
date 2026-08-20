@@ -308,10 +308,10 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA)                     */}
+      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - KATTA O'LCHAM)     */}
       {/* ========================================================================= */}
-      <section id="section-projects" className="py-28 px-4 max-w-7xl mx-auto w-full border-t border-slate-800/80">
-        <div className="space-y-12">
+      <section id="section-projects" className="py-28 px-4 sm:px-8 lg:px-12 max-w-[1440px] mx-auto w-full border-t border-slate-800/80">
+        <div className="space-y-14">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
@@ -322,18 +322,18 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 4 Cards in 1 Row (grid-cols-1 sm:grid-cols-2 lg:grid-cols-4) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 Large Cards in 1 Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {t.projectsSection.items.map((proj, idx) => (
               <a 
                 key={idx}
                 href={proj.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-3xl bg-slate-900 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5"
+                className="group rounded-3xl bg-slate-900/90 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2"
               >
-                {/* Screenshot Image Full Width */}
-                <div className="w-full aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+                {/* Large Screenshot Image */}
+                <div className="w-full h-56 sm:h-64 lg:h-72 overflow-hidden bg-slate-950 border-b border-slate-800/80 relative">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
@@ -341,23 +341,23 @@ export default function HomePage() {
                   />
                 </div>
 
-                {/* Info Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-bold text-blue-400 uppercase tracking-wider block">
+                {/* Info Content with Generous Spacing */}
+                <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+                  <div className="space-y-2.5">
+                    <span className="text-xs font-bold text-blue-400 uppercase tracking-wider block">
                       {proj.category}
                     </span>
-                    <h3 className="text-lg font-black text-white group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-black text-white group-hover:text-blue-400 transition-colors">
                       {proj.title}
                     </h3>
-                    <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                    <p className="text-sm text-slate-300 line-clamp-3 leading-relaxed">
                       {proj.desc}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-300">
-                    <span className="text-slate-400 font-mono text-[11px] truncate max-w-[170px]">{proj.link.replace("https://", "")}</span>
-                    <span className="text-blue-400 font-black">↗</span>
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-300">
+                    <span className="text-slate-400 font-mono text-xs truncate max-w-[200px]">{proj.link.replace("https://", "")}</span>
+                    <span className="text-blue-400 font-black text-base group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">↗</span>
                   </div>
                 </div>
               </a>
