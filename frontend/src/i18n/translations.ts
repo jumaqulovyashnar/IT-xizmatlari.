@@ -2,7 +2,7 @@ export type Language = 'uz' | 'en' | 'ru';
 
 export const translations = {
   uz: {
-    brandName: "IT Xizmatlari",
+    brandName: "IT Xizmatlar",
     slogan: "SIFAT • ISHONCH • NATIJA",
     subSlogan: "BIRGA YUKSALAMIZ!",
     phone: "+998 91 951 73 35",

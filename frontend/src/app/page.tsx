@@ -450,7 +450,7 @@ export default function HomePage() {
       <footer className="footer footer-center p-8 bg-slate-900 text-slate-300 mt-auto border-t border-slate-800">
         <div>
           <p className="font-extrabold text-sm text-white">
-            © 2026 IT Xizmatlari • Barcha huquqlar himoyalangan.
+            © 2026 IT Xizmatlar • Barcha huquqlar himoyalangan.
           </p>
           <p className="text-xs text-slate-400 mt-1 font-medium">
             Veb-saytlar • Mobil Ilovalar • Landing Page

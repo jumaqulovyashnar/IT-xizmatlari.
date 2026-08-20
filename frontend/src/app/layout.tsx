@@ -3,8 +3,8 @@ import "./globals.css";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "IT Xizmatlari Pro — Professional IT Infrastructure & Helpdesk",
-  description: "Enterprise software development, Cloud & DevOps, Cybersecurity and 24/7 IT Helpdesk platform.",
+  title: "IT Xizmatlar — Zamonaviy Web Saytlar, Mobile App va Landing Page",
+  description: "Enterprise software development, Cloud & DevOps, Cybersecurity and IT solutions platform.",
 };
 
 export default function RootLayout({
