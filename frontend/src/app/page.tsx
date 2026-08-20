@@ -100,64 +100,105 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 1-CHI BO'LIM: E-COMMERCE VEB-SAYTLAR VA ONLAYN DO'KONLAR                  */}
+      {/* 1-CHI BO'LIM: E-COMMERCE & VEB-PLATFORMA (KRAKEN INDUSTRIAL-EDITORIAL)    */}
       {/* ========================================================================= */}
       <section 
         id="section-websites" 
         aria-labelledby="websites-heading"
-        className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
+        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: E-Commerce Detailed Information (5 cols) */}
+        {/* Subtle Industrial Background Crosshairs */}
+        <span className="absolute top-8 left-4 text-slate-700/60 font-mono text-sm select-none pointer-events-none">+</span>
+        <span className="absolute top-8 right-4 text-slate-700/60 font-mono text-sm select-none pointer-events-none">+</span>
+
+        {/* Industrial Top Metadata Bar */}
+        <div className="flex flex-wrap items-center justify-between border-b border-slate-800/80 pb-4 mb-10 text-[11px] font-mono text-slate-400 uppercase tracking-widest gap-2">
+          <span className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            IT SERVICES // WEB ARCHITECTURE & E-COMMERCE
+          </span>
+          <span className="text-slate-400 font-semibold">TASHKENT, UZ • NEXT.JS 14 • PAYME/CLICK/1C</span>
+        </div>
+
+        {/* Two-Column Industrial Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Bold Industrial Typography & Call to Action (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/10 text-blue-400 border border-blue-500/20 text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-blue-400" /> E-Commerce & Web Platform
-              </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-blue-500/30 text-blue-400 text-[11px] font-mono font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" /> E-COMMERCE & WEB PLATFORM
+              </div>
               <h2 
                 id="websites-heading"
-                className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.15]"
+                className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[1.05]"
               >
-                {t.threeSections.section1.title}
+                E-Commerce va Zamonaviy Veb-Saytlar
               </h2>
-              <p className="text-slate-300/80 text-base sm:text-lg leading-[1.6] font-normal max-w-xl">
+              <p className="text-slate-300 text-base sm:text-lg leading-[1.6] font-normal">
                 {t.threeSections.section1.desc}
               </p>
             </div>
 
-            {/* Semantic Checklist with Micro-Interactions */}
-            <ul className="space-y-2.5 list-none p-0 m-0">
-              {t.threeSections.section1.features.map((feat, idx) => (
-                <li 
-                  key={idx}
-                  className="flex items-start gap-4 p-3 -mx-3 rounded-2xl transition-all duration-200 ease-out hover:bg-slate-900/60 hover:translate-x-1.5 group cursor-default"
-                >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/10 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 transition-all duration-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 group-hover:shadow-lg group-hover:shadow-blue-600/30">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <div className="space-y-0.5">
-                    <h3 className="text-base font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
-                      {feat.title}
-                    </h3>
-                    <p className="text-sm text-slate-400 leading-relaxed font-normal">
-                      {feat.desc}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            {/* Industrial CTA Block */}
+            <div className="pt-2 space-y-3">
+              <a 
+                href="tel:+998919517335" 
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black text-sm uppercase tracking-wider transition-all duration-200 hover:translate-x-1.5 shadow-lg shadow-blue-600/30 group"
+              >
+                Loyihani Boshlash <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <p className="text-xs font-mono text-slate-400">
+                3 bosqich · ~2 daqiqa maslahat · Oldindan to'lovsiz
+              </p>
+            </div>
           </div>
 
-          {/* Right Column: Refined Glass/Ambient Shadow Showcase (7 cols) */}
+          {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-slate-800/40 to-slate-900/60 p-2 sm:p-2.5 border border-slate-800/80 shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_30px_rgba(37,99,235,0.12)] backdrop-blur-sm transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.6),_0_0_45px_rgba(37,99,235,0.2)] hover:border-slate-700/80 group">
-              <img 
-                src="/ecommerce-showcase.png" 
-                alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
-                className="w-full h-auto rounded-xl sm:rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.008]"
-                loading="lazy"
-              />
+            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+              {/* Image Frame with Graphic Precision */}
+              <div className="relative rounded-xl overflow-hidden bg-slate-950">
+                <img 
+                  src="/ecommerce-showcase.png" 
+                  alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.008]"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Technical Bottom Label */}
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>SCALE: 100% // PRODUCTION TEMPLATE</span>
+                <span className="text-blue-400 font-bold">100% RESPONSIVE</span>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Bottom 3-Step Industrial Editorial Feature Grid (Kraken Style) */}
+        <div className="border-t border-slate-800/80 pt-10 mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
+            <div className="text-2xl font-mono font-black text-blue-400">01</div>
+            <h3 className="text-lg font-bold text-white tracking-tight">Homepage & Katalog</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Bosh sahifa, aqlli toifalar, mahsulot tafsilotlari, qulay savatcha va Payme/Click xavfsiz to'lovlari.
+            </p>
+          </div>
+
+          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
+            <div className="text-2xl font-mono font-black text-blue-400">02</div>
+            <h3 className="text-lg font-bold text-white tracking-tight">1C & CRM Integratsiyasi</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Omborxona hisobi, tovarlar qoldig'i, mijozlar bazasi va savdo voronkasi to'liq avtomatlashtiriladi.
+            </p>
+          </div>
+
+          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
+            <div className="text-2xl font-mono font-black text-blue-400">03</div>
+            <h3 className="text-lg font-bold text-white tracking-tight">Tezkorlik & Telegram Bot</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Google PageSpeed 99/100, 100% mobil moslashuvchanlik va har bir yangi buyurtma 0.1s da Telegramga keladi.
+            </p>
           </div>
         </div>
       </section>
