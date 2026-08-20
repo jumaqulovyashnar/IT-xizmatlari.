@@ -347,15 +347,13 @@ export default function HomePage() {
                 className="group rounded-3xl bg-slate-900 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5"
               >
                 {/* Screenshot Image */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 border-b border-slate-800">
-                  <img 
-                    src={proj.image} 
-                    alt={proj.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/90 backdrop-blur border border-slate-700 text-blue-400 text-[10px] font-extrabold flex items-center gap-1 shadow-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <span>Ko'rish</span>
-                    <ExternalLink className="w-3 h-3" />
+                <div className="w-full bg-slate-950 p-3 border-b border-slate-800">
+                  <div className="w-full aspect-[16/10] overflow-hidden rounded-2xl bg-slate-900/80 flex items-center justify-center">
+                    <img 
+                      src={proj.image} 
+                      alt={proj.title} 
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                 </div>
 
