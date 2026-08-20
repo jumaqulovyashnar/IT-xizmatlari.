@@ -11,20 +11,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const getInitialLanguage = (): Language => {
-  if (typeof window !== "undefined") {
-    try {
-      const saved = localStorage.getItem("it_services_lang") as Language;
-      if (saved && (saved === "uz" || saved === "en" || saved === "ru")) {
-        return saved;
-      }
-    } catch (e) {}
-  }
-  return "uz";
-};
-
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+  const [language, setLanguageState] = useState<Language>("uz");
 
   useEffect(() => {
     try {
@@ -39,7 +27,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setLanguageState(lang);
     try {
       localStorage.setItem("it_services_lang", lang);
-      document.cookie = `it_services_lang=${lang}; path=/; max-age=31536000`;
     } catch (e) {}
   };
 
