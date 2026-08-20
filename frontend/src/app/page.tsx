@@ -82,9 +82,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center overflow-hidden bg-gradient-to-b from-base-200/60 via-base-100 to-base-100">
         <div className="max-w-5xl mx-auto space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-black tracking-wide uppercase shadow-sm">
-            <Flame className="w-4 h-4 text-warning animate-bounce" /> {t.hero.badge}
-          </div>
+
 
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
             {t.hero.titleStart} <br />
