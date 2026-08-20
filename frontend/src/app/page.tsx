@@ -47,9 +47,11 @@ export default function HomePage() {
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2 text-sm font-bold text-slate-200">
+            <li><a href="#" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.home}</a></li>
             <li><a href="#section-websites" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.web}</a></li>
             <li><a href="#section-mobile" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.mobile}</a></li>
             <li><a href="#section-landing" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.landing}</a></li>
+            <li><a href="#section-contact" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.contact}</a></li>
           </ul>
         </div>
 
@@ -387,7 +389,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* FOYDALANUVCHI RASMI USLUBIDAGI PASTKI ALOQA BLOKI (CONTACT BAR)           */}
       {/* ========================================================================= */}
-      <section className="py-14 px-4 max-w-7xl mx-auto w-full">
+      <section id="section-contact" className="py-14 px-4 max-w-7xl mx-auto w-full">
         <div className="p-8 sm:p-10 rounded-[36px] bg-gradient-to-r from-slate-900 via-blue-950/60 to-slate-900 border-2 border-blue-500/40 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Left: Phone & Contact */}
           <div className="flex items-center space-x-4">

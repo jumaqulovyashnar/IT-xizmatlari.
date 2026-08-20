@@ -9,16 +9,15 @@ export const translations = {
     contactUs: "BIZ BILAN BOG'LANING",
     alwaysWithYou: "BIZ HAR DOIM SIZ BILAN",
     nav: {
-      services: "Xizmatlar",
-      web: "Web Saytlar",
-      mobile: "Mobile App",
-      landing: "Landing Page",
-      portal: "Mijoz Portali",
-      admin: "Boshqaruv Paneli",
-      orderNow: "Buyurtma Berish",
+      home: "Bosh sahifa",
+      web: "Veb-saytlar",
+      mobile: "Mobil Ilovalar",
+      landing: "Lending Saytlar",
+      contact: "Aloqa",
+      orderNow: "Buyurtma berish",
     },
     hero: {
-      badge: "Professional Dasturlash va IT Yechimlar",
+      badge: "Professional IT Xizmatlar",
       titleStart: "Biznesingiz uchun Zamonaviy",
       titleGradient: "Veb-Saytlar, Mobil Ilovalar va IT Xizmatlar",
       subtitle: "Biznesingizni raqamlashtirish, mijozlar oqimini oshirish va savdoni avtomatlashtirish uchun yuqori sifatli dasturiy yechimlar yaratamiz.",
@@ -27,7 +26,7 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        badge: "01 / WEB PLATFORMS",
+        badge: "WEB PLATFORMA",
         title: "Zamonaviy Web Saytlar va Katta Tizimlar",
         desc: "Har qanday murakkablikdagi kengaytiriladigan korporativ veb-platformalar, xavfsiz va tezkor arxitektura.",
         items: [
@@ -54,7 +53,7 @@ export const translations = {
         ]
       },
       section2: {
-        badge: "02 / MOBILE APPS",
+        badge: "MOBIL ILOVALAR",
         title: "Mobil Ilovalar (iOS & Android)",
         desc: "Foydalanuvchilar uchun qulay, chiroyli UI/UX dizaynga ega hamda App Store va Google Play uchun optimallashtirilgan mobil dasturlar.",
         features: [
@@ -67,8 +66,8 @@ export const translations = {
         stats: "100K+ Yuklab olishlarga mos arxitektura"
       },
       section3: {
-        badge: "03 / LANDING PAGES",
-        title: "Yuqori Konversiyali Landing Page (Lending Saytlar)",
+        badge: "LENDING SAYTLAR",
+        title: "Yuqori Konversiyali Lending Saytlar",
         desc: "Mahsulot yoki xizmatingizni birinchi daqiqalardanoq sotishga mo'ljallangan, zamonaviy va ultra-tezkor sotuvchi saytlar.",
         features: [
           "Marketing psixologiyasi va sotuvchi struktura (AIDA)",
@@ -111,16 +110,15 @@ export const translations = {
     contactUs: "CONTACT US",
     alwaysWithYou: "ALWAYS WITH YOU",
     nav: {
-      services: "Services",
+      home: "Home",
       web: "Websites",
       mobile: "Mobile Apps",
       landing: "Landing Pages",
-      portal: "Client Portal",
-      admin: "Admin Dashboard",
-      orderNow: "Order Now",
+      contact: "Contact",
+      orderNow: "Get in Touch",
     },
     hero: {
-      badge: "Professional Software Engineering & IT Solutions",
+      badge: "Professional IT Solutions",
       titleStart: "Modern High-Performance",
       titleGradient: "Websites, Mobile Apps & IT Systems",
       subtitle: "We build cutting-edge digital solutions to automate workflows, accelerate sales, and scale your business globally.",
@@ -129,7 +127,7 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        badge: "01 / WEB PLATFORMS",
+        badge: "WEB PLATFORMS",
         title: "Modern Websites & Enterprise Web Systems",
         desc: "Scalable corporate web platforms, secure payment architectures, and responsive digital products.",
         items: [
@@ -156,7 +154,7 @@ export const translations = {
         ]
       },
       section2: {
-        badge: "02 / MOBILE APPS",
+        badge: "MOBILE APPS",
         title: "Mobile App Development (iOS & Android)",
         desc: "Intuitive UI/UX, blazingly fast mobile applications published and maintained on App Store and Google Play.",
         features: [
@@ -169,7 +167,7 @@ export const translations = {
         stats: "Built for 100K+ concurrent users"
       },
       section3: {
-        badge: "03 / LANDING PAGES",
+        badge: "LANDING PAGES",
         title: "High-Converting Landing Pages",
         desc: "Ultra-fast, conversion-optimized landing pages designed to turn visitors into paying customers from day one.",
         features: [
@@ -213,16 +211,15 @@ export const translations = {
     contactUs: "СВЯЖИТЕСЬ С НАМИ",
     alwaysWithYou: "МЫ ВСЕГДА С ВАМИ",
     nav: {
-      services: "Услуги",
+      home: "Главная",
       web: "Веб-сайты",
-      mobile: "Мобильные Приложения",
-      landing: "Landing Page",
-      portal: "Портал Клиента",
-      admin: "Панель Управления",
-      orderNow: "Заказать",
+      mobile: "Мобильные приложения",
+      landing: "Лендинги",
+      contact: "Контакты",
+      orderNow: "Связаться с нами",
     },
     hero: {
-      badge: "Профессиональная Разработка и IT Решения",
+      badge: "Профессиональные IT Услуги",
       titleStart: "Современные и Надежные",
       titleGradient: "Веб-Сайты, Мобильные Приложения и IT Системы",
       subtitle: "Разрабатываем высокотехнологичные цифровые продукты для автоматизации бизнеса, увеличения продаж и привлечения клиентов.",
@@ -231,7 +228,7 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        badge: "01 / WEB СИСТЕМЫ",
+        badge: "WEB ПЛАТФОРМЫ",
         title: "Современные Веб-Сайты и Масштабные Системы",
         desc: "Корпоративные платформы любой сложности, высокая безопасность, быстрая и отказоустойчивая архитектура.",
         items: [
@@ -258,7 +255,7 @@ export const translations = {
         ]
       },
       section2: {
-        badge: "02 / МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ",
+        badge: "МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ",
         title: "Разработка Мобильных Приложений (iOS & Android)",
         desc: "Удобный интерфейс, премиальный UI/UX дизайн, публикация и сопровождение в App Store и Google Play.",
         features: [
@@ -271,8 +268,8 @@ export const translations = {
         stats: "Архитектура под 100K+ пользователей"
       },
       section3: {
-        badge: "03 / LANDING PAGE",
-        title: "Высококонверсионные Landing Page (Лендинги)",
+        badge: "ЛЕНДИНГИ",
+        title: "Высококонверсионные Лендинги",
         desc: "Продающие одностраничные сайты нового поколения, созданные для максимального привлечения клиентов и заявок.",
         features: [
           "Маркетинговая структура AIDA и современный визуал",
