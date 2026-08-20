@@ -109,26 +109,26 @@ export default function HomePage() {
       >
         {/* Two-Column Industrial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Bold Industrial Typography (5 cols) */}
-          <div className="lg:col-span-5 space-y-8">
+          {/* Left Column: Natural & Clean Typography (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             <div className="space-y-4">
               <h2 
                 id="websites-heading"
-                className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[1.05]"
+                className="text-3xl sm:text-4xl lg:text-[42px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
               >
                 E-Commerce va Zamonaviy Veb-Saytlar
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-[1.6] font-normal">
+              <p className="text-slate-300 text-base sm:text-lg leading-[1.65] font-normal">
                 {t.threeSections.section1.desc}
               </p>
             </div>
           </div>
 
-          {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
+          {/* Right Column: Precision Graphic Framed Showcase Image with +100px Height (7 cols) */}
           <div className="lg:col-span-7 w-full">
             <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Graphic Precision & Increased Height */}
-              <div className="relative h-[340px] sm:h-[400px] lg:h-[430px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              {/* Image Frame with Graphic Precision & 100px Increased Height */}
+              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
