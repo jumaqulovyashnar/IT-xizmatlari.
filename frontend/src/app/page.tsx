@@ -109,18 +109,40 @@ export default function HomePage() {
       >
         {/* Two-Column Industrial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Natural & Clean Typography (5 cols) */}
+          {/* Left Column: Natural & Clean Typography with Structured Features matching Card Height (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h2 
                 id="websites-heading"
-                className="text-3xl sm:text-4xl lg:text-[42px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
               >
                 E-Commerce va Zamonaviy Veb-Saytlar
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-[1.65] font-normal">
+              <p className="text-slate-300 text-sm sm:text-base leading-[1.65] font-normal">
                 {t.threeSections.section1.desc}
               </p>
+            </div>
+
+            {/* Feature List to perfectly balance vertical height */}
+            <div className="space-y-3.5 pt-1">
+              {t.threeSections.section1.features.map((feat, idx) => (
+                <div 
+                  key={idx}
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                      {feat.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                      {feat.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -143,33 +165,6 @@ export default function HomePage() {
                 <span className="text-blue-400 font-bold">100% RESPONSIVE</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom 3-Step Industrial Editorial Feature Grid (Kraken Style) */}
-        <div className="border-t border-slate-800/80 pt-10 mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
-            <div className="text-2xl font-mono font-black text-blue-400">01</div>
-            <h3 className="text-lg font-bold text-white tracking-tight">Homepage & Katalog</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Bosh sahifa, aqlli toifalar, mahsulot tafsilotlari, qulay savatcha va Payme/Click xavfsiz to'lovlari.
-            </p>
-          </div>
-
-          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
-            <div className="text-2xl font-mono font-black text-blue-400">02</div>
-            <h3 className="text-lg font-bold text-white tracking-tight">1C & CRM Integratsiyasi</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Omborxona hisobi, tovarlar qoldig'i, mijozlar bazasi va savdo voronkasi to'liq avtomatlashtiriladi.
-            </p>
-          </div>
-
-          <div className="space-y-3 group p-4 -mx-4 rounded-2xl hover:bg-slate-900/40 transition-all duration-200 hover:translate-x-1">
-            <div className="text-2xl font-mono font-black text-blue-400">03</div>
-            <h3 className="text-lg font-bold text-white tracking-tight">Tezkorlik & Telegram Bot</h3>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Google PageSpeed 99/100, 100% mobil moslashuvchanlik va har bir yangi buyurtma 0.1s da Telegramga keladi.
-            </p>
           </div>
         </div>
       </section>
