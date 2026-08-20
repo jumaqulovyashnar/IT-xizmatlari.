@@ -2,24 +2,26 @@
 
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Globe, Palette, Moon, Sun } from "lucide-react";
+import { Globe, Palette, Moon, Sun, Laptop } from "lucide-react";
 
-export const DAISY_THEMES = [
-  { id: "dark", name: "Dark" },
-  { id: "light", name: "Light" },
-  { id: "night", name: "Night (IT Blue)" },
-  { id: "corporate", name: "Corporate" },
-  { id: "synthwave", name: "Synthwave" },
-  { id: "cyberpunk", name: "Cyberpunk" },
-  { id: "dracula", name: "Dracula" },
-  { id: "business", name: "Business" },
+export const THEMES = [
+  { id: "dark", name: "Dark (Tungi)", icon: "🌙" },
+  { id: "light", name: "Light (Kunduzgi)", icon: "☀️" },
+  { id: "night", name: "Night (IT Ko'k)", icon: "🌌" },
+  { id: "corporate", name: "Corporate", icon: "🏢" },
+  { id: "synthwave", name: "Synthwave", icon: "⚡" },
+  { id: "cyberpunk", name: "Cyberpunk", icon: "🤖" },
+  { id: "dracula", name: "Dracula", icon: "🧛" },
+  { id: "business", name: "Business", icon: "💼" },
 ];
 
 export function ThemeLanguageSwitcher() {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const [theme, setTheme] = useState("dark");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("it_services_theme") || "dark";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
@@ -31,27 +33,40 @@ export function ThemeLanguageSwitcher() {
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
+  const toggleDarkLight = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    handleThemeChange(nextTheme);
+  };
+
+  if (!mounted) return null;
+
   return (
     <div className="flex items-center gap-2">
-      {/* Language Selector Dropdown (DaisyUI) */}
+      {/* 1. Language Dropdown */}
       <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-ghost btn-sm gap-1 text-xs font-semibold">
-          <Globe className="w-4 h-4 text-primary" />
-          <span className="uppercase">{language}</span>
+        <label 
+          tabIndex={0} 
+          className="btn btn-sm btn-ghost gap-1.5 px-3 py-1 bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl cursor-pointer text-xs font-bold transition-all shadow-sm"
+        >
+          <Globe className="w-3.5 h-3.5 text-blue-400" />
+          <span className="uppercase tracking-wider">{language}</span>
         </label>
-        <ul tabIndex={0} className="dropdown-content z-[100] menu p-2 shadow-2xl bg-base-200 border border-base-300 rounded-box w-32 mt-2">
+        <ul 
+          tabIndex={0} 
+          className="dropdown-content z-[100] menu p-2 shadow-2xl bg-slate-900 border border-slate-800 text-slate-200 rounded-2xl w-36 mt-2 space-y-1"
+        >
           <li>
             <button 
               onClick={() => setLanguage("uz")} 
-              className={language === "uz" ? "active font-bold" : ""}
+              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "uz" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
-              🇺🇿 O'zbek
+              🇺🇿 O'zbekcha
             </button>
           </li>
           <li>
             <button 
               onClick={() => setLanguage("en")} 
-              className={language === "en" ? "active font-bold" : ""}
+              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "en" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
               🇬🇧 English
             </button>
@@ -59,7 +74,7 @@ export function ThemeLanguageSwitcher() {
           <li>
             <button 
               onClick={() => setLanguage("ru")} 
-              className={language === "ru" ? "active font-bold" : ""}
+              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "ru" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
               🇷🇺 Русский
             </button>
@@ -67,20 +82,43 @@ export function ThemeLanguageSwitcher() {
         </ul>
       </div>
 
-      {/* DaisyUI Theme Selector Dropdown */}
+      {/* 2. Quick Dark / Light Toggle Button */}
+      <button
+        onClick={toggleDarkLight}
+        title="Mavzuni almashtirish (Dark / Light)"
+        className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-blue-400 hover:text-white transition-all shadow-sm group"
+      >
+        {theme === "light" ? (
+          <Sun className="w-4 h-4 text-amber-400 group-hover:rotate-45 transition-transform" />
+        ) : (
+          <Moon className="w-4 h-4 text-blue-400 group-hover:-rotate-12 transition-transform" />
+        )}
+      </button>
+
+      {/* 3. Theme Palette Selector Dropdown */}
       <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-ghost btn-sm gap-1 text-xs font-semibold">
-          <Palette className="w-4 h-4 text-secondary" />
-          <span className="capitalize hidden sm:inline">{theme}</span>
+        <label 
+          tabIndex={0} 
+          title="Barcha rangli mavzular"
+          className="btn btn-sm btn-ghost px-2.5 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 rounded-xl cursor-pointer text-slate-200 transition-all shadow-sm"
+        >
+          <Palette className="w-4 h-4 text-blue-400" />
         </label>
-        <ul tabIndex={0} className="dropdown-content z-[100] menu p-2 shadow-2xl bg-base-200 border border-base-300 rounded-box w-44 mt-2 max-h-60 overflow-y-auto">
-          {DAISY_THEMES.map((th) => (
+        <ul 
+          tabIndex={0} 
+          className="dropdown-content z-[100] menu p-2 shadow-2xl bg-slate-900 border border-slate-800 text-slate-200 rounded-2xl w-48 mt-2 max-h-72 overflow-y-auto space-y-1"
+        >
+          <li className="menu-title text-[10px] uppercase font-black tracking-wider text-slate-400 px-3 py-1">
+            Mavzular (Themes)
+          </li>
+          {THEMES.map((th) => (
             <li key={th.id}>
               <button 
                 onClick={() => handleThemeChange(th.id)}
-                className={`text-xs capitalize ${theme === th.id ? "active font-bold" : ""}`}
+                className={`text-xs font-semibold py-2 px-3 rounded-lg flex items-center justify-between hover:bg-blue-600 hover:text-white transition-colors ${theme === th.id ? "bg-blue-600 text-white font-bold" : ""}`}
               >
-                {th.name}
+                <span>{th.name}</span>
+                <span>{th.icon}</span>
               </button>
             </li>
           ))}
