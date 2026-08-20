@@ -424,14 +424,6 @@ export default function HomePage() {
             <a href="#section-mobile" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.mobile}</a>
             <a href="#section-landing" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.landing}</a>
             <a href="#section-projects" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.projects}</a>
-            <a 
-              href="https://t.me/yashnar" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors font-extrabold"
-            >
-              Telegram: @yashnar ↗
-            </a>
           </div>
 
           {/* 3. Right: Copyright */}
