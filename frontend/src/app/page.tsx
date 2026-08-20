@@ -413,14 +413,37 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="footer footer-center p-8 bg-slate-900 text-slate-300 mt-auto border-t border-slate-800">
-        <div>
-          <p className="font-extrabold text-sm text-white">
-            © 2026 IT Xizmatlar • Barcha huquqlar himoyalangan.
-          </p>
-          <p className="text-xs text-slate-400 mt-1 font-medium">
-            Veb-saytlar • Mobil Ilovalar • Landing Page
-          </p>
+      <footer className="bg-slate-900/90 border-t border-slate-800 text-slate-300 mt-auto py-12 px-6 sm:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Brand Logo & Slogan */}
+          <div className="flex items-center gap-3.5">
+            <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black shadow-lg shadow-blue-500/30">
+              <Laptop className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-extrabold text-xl tracking-tight text-white block">
+                {t.brandName}
+              </span>
+              <span className="text-xs text-slate-400 font-medium">
+                Veb-saytlar • Mobil Ilovalar • Landing Page
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Nav Links */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-bold text-slate-300">
+            <a href="#" className="hover:text-blue-400 transition-colors">{t.nav.home}</a>
+            <a href="#section-websites" className="hover:text-blue-400 transition-colors">{t.nav.web}</a>
+            <a href="#section-mobile" className="hover:text-blue-400 transition-colors">{t.nav.mobile}</a>
+            <a href="#section-landing" className="hover:text-blue-400 transition-colors">{t.nav.landing}</a>
+            <a href="#section-projects" className="hover:text-blue-400 transition-colors">{t.nav.projects}</a>
+            <a href="https://t.me/yashnar" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Telegram (@yashnar)</a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center md:text-right text-xs text-slate-400 font-medium">
+            <p>© 2026 IT Xizmatlar. Barcha huquqlar himoyalangan.</p>
+          </div>
         </div>
       </footer>
     </div>
