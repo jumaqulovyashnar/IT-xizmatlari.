@@ -54,7 +54,7 @@ export default function HomePage() {
             <li><a href="#section-mobile" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.mobile}</a></li>
             <li><a href="#section-landing" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.landing}</a></li>
             <li><a href="#section-projects" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.projects}</a></li>
-            <li><a href="#section-contact" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.contact}</a></li>
+            <li><a href="tel:+998919517335" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.contact}</a></li>
           </ul>
         </div>
 
@@ -327,59 +327,6 @@ export default function HomePage() {
                 </div>
               </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* FOYDALANUVCHI RASMI USLUBIDAGI PASTKI ALOQA BLOKI (CONTACT BAR)           */}
-      {/* ========================================================================= */}
-      <section id="section-contact" className="py-14 px-4 max-w-7xl mx-auto w-full">
-        <div className="p-8 sm:p-10 rounded-[36px] bg-gradient-to-r from-slate-900 via-blue-950/60 to-slate-900 border-2 border-blue-500/40 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6">
-          {/* Left: Phone & Contact */}
-          <div className="flex items-center space-x-4">
-            <a 
-              href="tel:+998919517335" 
-              className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xl shadow-blue-500/40 hover:scale-110 transition-transform"
-            >
-              <PhoneCall className="w-8 h-8" />
-            </a>
-            <div>
-              <div className="text-xs font-black uppercase tracking-wider text-blue-400">
-                {t.contactUs}
-              </div>
-              <a 
-                href="tel:+998919517335" 
-                className="text-2xl sm:text-3xl font-black text-white hover:text-blue-400 transition-colors"
-              >
-                {t.phone}
-              </a>
-            </div>
-          </div>
-
-          {/* Center Badge: Sifat - Ishonch - Natija */}
-          <div className="px-8 py-4 rounded-full bg-blue-600 text-white font-black text-center shadow-lg shadow-blue-500/40 space-y-0.5">
-            <div className="text-sm sm:text-base tracking-widest uppercase flex items-center justify-center gap-2 font-black">
-              <ShieldCheck className="w-5 h-5" /> {t.slogan}
-            </div>
-            <div className="text-xs tracking-wider opacity-90 uppercase font-bold">
-              — {t.subSlogan} —
-            </div>
-          </div>
-
-          {/* Right: Biz Har Doim Siz Bilan */}
-          <div className="flex items-center space-x-4">
-            <div className="text-right hidden sm:block">
-              <div className="text-xs font-black uppercase tracking-wider text-slate-400">
-                Kafolatlangan Servis
-              </div>
-              <div className="text-xl font-black text-white">
-                {t.alwaysWithYou}
-              </div>
-            </div>
-            <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xl shadow-blue-500/30">
-              <MapPin className="w-8 h-8" />
-            </div>
           </div>
         </div>
       </section>
