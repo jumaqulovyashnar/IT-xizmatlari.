@@ -107,19 +107,6 @@ export default function HomePage() {
         aria-labelledby="websites-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative"
       >
-        {/* Subtle Industrial Background Crosshairs */}
-        <span className="absolute top-8 left-4 text-slate-700/60 font-mono text-sm select-none pointer-events-none">+</span>
-        <span className="absolute top-8 right-4 text-slate-700/60 font-mono text-sm select-none pointer-events-none">+</span>
-
-        {/* Industrial Top Metadata Bar */}
-        <div className="flex flex-wrap items-center justify-between border-b border-slate-800/80 pb-4 mb-10 text-[11px] font-mono text-slate-400 uppercase tracking-widest gap-2">
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-            IT SERVICES // WEB ARCHITECTURE & E-COMMERCE
-          </span>
-          <span className="text-slate-400 font-semibold">TASHKENT, UZ • NEXT.JS 14 • PAYME/CLICK/1C</span>
-        </div>
-
         {/* Two-Column Industrial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Bold Industrial Typography & Call to Action (5 cols) */}
