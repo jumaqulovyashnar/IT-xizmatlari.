@@ -109,12 +109,9 @@ export default function HomePage() {
       >
         {/* Two-Column Industrial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Bold Industrial Typography & Call to Action (5 cols) */}
+          {/* Left Column: Bold Industrial Typography (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-blue-500/30 text-blue-400 text-[11px] font-mono font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" /> E-COMMERCE & WEB PLATFORM
-              </div>
               <h2 
                 id="websites-heading"
                 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[1.05]"
