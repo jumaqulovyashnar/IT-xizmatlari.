@@ -31,16 +31,16 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white transition-colors duration-300">
       {/* Navbar */}
-      <header className="navbar bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-6 sm:px-10 lg:px-16 min-h-[80px] py-3">
+      <header className="navbar bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 px-6 sm:px-10 lg:px-16 min-h-[80px] py-3 transition-colors duration-300">
         <div className="navbar-start">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
               <Laptop className="w-6 h-6" />
             </div>
             <div>
-              <span className="font-extrabold text-2xl tracking-tight text-white group-hover:text-blue-400 transition-colors">
+              <span className="font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
                 {t.brandName}
               </span>
             </div>
@@ -52,7 +52,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.home}
               </a>
@@ -60,7 +60,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-websites" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.web}
               </a>
@@ -68,7 +68,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-mobile" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.mobile}
               </a>
@@ -76,7 +76,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-landing" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.landing}
               </a>
@@ -84,7 +84,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-projects" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.projects}
               </a>
@@ -107,18 +107,18 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 text-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-b border-slate-800/80">
+      <section className="relative py-24 px-4 text-center overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-5xl mx-auto space-y-8 relative z-10">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.22] sm:leading-[1.18] lg:leading-[1.15] text-white drop-shadow-sm pb-1">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.22] sm:leading-[1.18] lg:leading-[1.15] text-slate-900 dark:text-white drop-shadow-sm pb-1">
             {t.hero.titleStart} <br />
-            <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 bg-clip-text text-transparent font-black drop-shadow-[0_2px_20px_rgba(59,130,246,0.4)]">
+            <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-blue-700 dark:from-blue-400 dark:via-sky-300 dark:to-blue-500 bg-clip-text text-transparent font-black drop-shadow-[0_2px_20px_rgba(59,130,246,0.3)]">
               {t.hero.titleGradient}
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300/90 font-normal leading-[1.75] sm:leading-[1.8] tracking-normal">
+          <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-600 dark:text-slate-300/90 font-normal leading-[1.75] sm:leading-[1.8] tracking-normal">
             {t.hero.subtitle}
           </p>
 
@@ -129,7 +129,7 @@ export default function HomePage() {
               </Button>
             </a>
             <a href="#section-websites">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto font-bold text-lg h-14 px-8 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 hover:border-blue-500 transition-all">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto font-bold text-lg h-14 px-8 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 hover:border-blue-500 transition-all">
                 {t.hero.viewServices}
               </Button>
             </a>
@@ -152,11 +152,11 @@ export default function HomePage() {
             <div className="space-y-3.5">
               <h2 
                 id="websites-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
               >
                 {t.threeSections.section1.title}
               </h2>
-              <p className="text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
                 {t.threeSections.section1.desc}
               </p>
             </div>
@@ -166,16 +166,16 @@ export default function HomePage() {
               {t.threeSections.section1.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <CheckCircle2 className="w-4.5 h-4.5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
@@ -186,9 +186,9 @@ export default function HomePage() {
 
           {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none">
               {/* Image Frame with Balanced Height */}
-              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
@@ -198,9 +198,9 @@ export default function HomePage() {
               </div>
 
               {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
                 <span>SCALE: 100% // PRODUCTION TEMPLATE</span>
-                <span className="text-blue-400 font-bold">100% RESPONSIVE</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">100% RESPONSIVE</span>
               </div>
             </div>
           </div>
@@ -213,14 +213,14 @@ export default function HomePage() {
       <section 
         id="section-mobile" 
         aria-labelledby="mobile-heading"
-        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
+        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Precision Graphic Framed Mobile Image (7 cols) */}
           <div className="lg:col-span-7 w-full order-2 lg:order-1">
-            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none">
               {/* Image Frame with Balanced Height */}
-              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/mobile-showcase.png" 
                   alt="Mobile App Showcase" 
@@ -230,9 +230,9 @@ export default function HomePage() {
               </div>
 
               {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
                 <span>SCALE: 100% // PRODUCTION APP</span>
-                <span className="text-blue-400 font-bold">iOS & ANDROID</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">iOS & ANDROID</span>
               </div>
             </div>
           </div>
@@ -242,11 +242,11 @@ export default function HomePage() {
             <div className="space-y-3.5">
               <h2 
                 id="mobile-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
               >
                 {t.threeSections.section2.title}
               </h2>
-              <p className="text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
                 {t.threeSections.section2.desc}
               </p>
             </div>
@@ -256,16 +256,16 @@ export default function HomePage() {
               {t.threeSections.section2.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <CheckCircle2 className="w-4.5 h-4.5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
       <section 
         id="section-landing" 
         aria-labelledby="landing-heading"
-        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
+        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
@@ -290,11 +290,11 @@ export default function HomePage() {
             <div className="space-y-3.5">
               <h2 
                 id="landing-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
               >
                 {t.threeSections.section3.title}
               </h2>
-              <p className="text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
                 {t.threeSections.section3.desc}
               </p>
             </div>
@@ -304,16 +304,16 @@ export default function HomePage() {
               {t.threeSections.section3.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <CheckCircle2 className="w-4.5 h-4.5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
@@ -324,9 +324,9 @@ export default function HomePage() {
 
           {/* Right Column: Precision Graphic Framed Landing Page Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none">
               {/* Image Frame with Balanced Height */}
-              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/landing-showcase.png" 
                   alt="Landing Page Website Showcase" 
@@ -336,9 +336,9 @@ export default function HomePage() {
               </div>
 
               {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
                 <span>SCALE: 100% // PRODUCTION LANDING</span>
-                <span className="text-blue-400 font-bold">HIGH CONVERTING</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">HIGH CONVERTING</span>
               </div>
             </div>
           </div>
@@ -348,14 +348,14 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - MAKSIMAL KENG EN)  */}
       {/* ========================================================================= */}
-      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[1840px] mx-auto w-full border-t border-slate-800/80">
+      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[1840px] mx-auto w-full border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
         <div className="space-y-14">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
               {t.projectsSection.title}
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg">
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
               {t.projectsSection.subtitle}
             </p>
           </div>
@@ -368,10 +368,10 @@ export default function HomePage() {
                 href={proj.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-3xl bg-slate-900/90 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2"
+                className="group rounded-3xl bg-white dark:bg-slate-900/90 border-2 border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2 shadow-md dark:shadow-none"
               >
                 {/* Large Screenshot Image - 100% Fully Visible */}
-                <div className="w-full h-60 sm:h-68 lg:h-76 overflow-hidden bg-slate-950 border-b border-slate-800/80 p-3.5 flex items-center justify-center">
+                <div className="w-full h-60 sm:h-68 lg:h-76 overflow-hidden bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800/80 p-3.5 flex items-center justify-center">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
@@ -382,20 +382,20 @@ export default function HomePage() {
                 {/* Info Content with Generous Spacing */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
                   <div className="space-y-2.5">
-                    <span className="text-xs font-bold text-blue-400 uppercase tracking-wider block">
+                    <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block">
                       {proj.category}
                     </span>
-                    <h3 className="text-xl font-black text-white group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {proj.title}
                     </h3>
-                    <p className="text-sm text-slate-300 line-clamp-3 leading-relaxed">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                       {proj.desc}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-300">
-                    <span className="text-slate-400 font-mono text-xs truncate max-w-[200px]">{proj.link.replace("https://", "")}</span>
-                    <span className="text-blue-400 font-black text-base group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                  <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-300">
+                    <span className="font-mono text-xs truncate max-w-[200px]">{proj.link.replace("https://", "")}</span>
+                    <span className="text-blue-600 dark:text-blue-400 font-black text-base group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform">↗</span>
                   </div>
                 </div>
               </a>
@@ -405,37 +405,37 @@ export default function HomePage() {
       </section>
 
       {/* Footer (1 Qatorda - Single Row) */}
-      <footer className="bg-slate-950 border-t border-slate-800/80 text-slate-300 mt-auto py-8 px-6 sm:px-10 lg:px-16 w-full">
+      <footer className="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 text-slate-600 dark:text-slate-300 mt-auto py-8 px-6 sm:px-10 lg:px-16 w-full transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* 1. Left: Brand Logo & Name */}
           <Link href="/" className="flex items-center space-x-3 group shrink-0">
             <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-black shadow-md shadow-blue-500/30 group-hover:scale-105 transition-transform">
               <Laptop className="w-4 h-4" />
             </div>
-            <span className="font-extrabold text-lg tracking-tight text-white group-hover:text-blue-400 transition-colors">
+            <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
               {t.brandName}
             </span>
           </Link>
 
           {/* 2. Center: Quick Nav Links */}
-          <div className="flex flex-wrap items-center justify-center gap-7 text-xs sm:text-sm font-bold text-slate-400">
-            <a href="#" className="hover:text-white transition-colors">{t.nav.home}</a>
-            <a href="#section-websites" className="hover:text-white transition-colors">{t.nav.web}</a>
-            <a href="#section-mobile" className="hover:text-white transition-colors">{t.nav.mobile}</a>
-            <a href="#section-landing" className="hover:text-white transition-colors">{t.nav.landing}</a>
-            <a href="#section-projects" className="hover:text-white transition-colors">{t.nav.projects}</a>
+          <div className="flex flex-wrap items-center justify-center gap-7 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400">
+            <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.home}</a>
+            <a href="#section-websites" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.web}</a>
+            <a href="#section-mobile" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.mobile}</a>
+            <a href="#section-landing" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.landing}</a>
+            <a href="#section-projects" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t.nav.projects}</a>
             <a 
               href="https://t.me/yashnar" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-blue-400 hover:text-blue-300 transition-colors font-extrabold"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors font-extrabold"
             >
               Telegram: @yashnar ↗
             </a>
           </div>
 
           {/* 3. Right: Copyright */}
-          <p className="text-xs text-slate-400 font-medium text-center lg:text-right shrink-0">
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium text-center lg:text-right shrink-0">
             © 2026 IT Xizmatlar. Barcha huquqlar himoyalangan.
           </p>
         </div>
