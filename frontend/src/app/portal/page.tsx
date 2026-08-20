@@ -108,7 +108,7 @@ export default function PortalPage() {
             </Button>
           </Link>
           <span className="font-bold text-sm hidden md:inline opacity-70">
-            / {t.nav.portal}
+            / {t.portal.title}
           </span>
         </div>
 
