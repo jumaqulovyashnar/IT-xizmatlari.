@@ -11,19 +11,17 @@ export function ThemeLanguageSwitcher() {
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem("it_services_theme") || "dark";
+    const savedTheme = localStorage.getItem("it_services_theme") || "night";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
 
   const toggleDarkLight = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
+    const nextTheme = theme === "light" || theme === "corporate" ? "night" : "light";
     setTheme(nextTheme);
     localStorage.setItem("it_services_theme", nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
-
-  if (!mounted) return null;
 
   return (
     <div className="flex items-center gap-2.5">
