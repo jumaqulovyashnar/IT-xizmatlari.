@@ -62,7 +62,7 @@ export const translations = {
     threeSections: {
       section1: {
         title: "E-Commerce va Zamonaviy Veb-Saytlar",
-        desc: "Kompaniyangiz mahsulot va tovarlarini internet orqali avtomatlashtirilgan tarzda sotish uchun to'liq funksional E-Commerce tizimlarini ishlab chiqamiz.",
+        desc: "Kompaniyangiz mahsulot va tovarlarini internet orqali avtomatlashtirilgan tarzda sotish, to'lovlarni xavfsiz qabul qilish hamda savdo hajmini bir necha barobar oshirish uchun to'liq funksional E-Commerce tizimlarini ishlab chiqamiz.",
         features: [
           { title: "Bosh sahifa (Homepage)", desc: "Yangi kolleksiyalar, aksiyalar, brendlar taqdimoti va tezkor qidiruv." },
           { title: "Mahsulot sahifasi (Product Detail Page)", desc: "Rasmlar galereyasi, o'lchamlar, ranglar, narxlar va mijozlar sharhlari." },

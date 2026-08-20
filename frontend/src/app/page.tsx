@@ -127,12 +127,12 @@ export default function HomePage() {
           {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
             <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Graphic Precision */}
-              <div className="relative rounded-xl overflow-hidden bg-slate-950">
+              {/* Image Frame with Graphic Precision & Increased Height */}
+              <div className="relative h-[340px] sm:h-[400px] lg:h-[430px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.008]"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                 />
               </div>
