@@ -132,75 +132,84 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 1-CHI BO'LIM: ZAMONAVIY WEB SAYTLAR VA KATTA TIZIMLAR                     */}
+      {/* 1-CHI BO'LIM: E-COMMERCE VEB-SAYTLAR VA ONLAYN DO'KONLAR                  */}
       {/* ========================================================================= */}
-      <section id="section-websites" className="py-24 px-4 max-w-7xl mx-auto w-full">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column: Stylized Computer Mockup & Intro */}
-          <div className="lg:w-5/12 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              {t.threeSections.section1.title}
-            </h2>
-            <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-              {t.threeSections.section1.desc}
-            </p>
+      <section id="section-websites" className="py-28 px-4 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: E-Commerce Detailed Information */}
+          <div className="lg:col-span-5 space-y-7">
+            <div className="space-y-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+                E-Commerce Veb-Saytlar va Onlayn Do'konlar
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                Kompaniyangiz mahsulot va tovarlarini internet orqali avtomatlashtirilgan tarzda sotish uchun to'liq funksional E-Commerce tizimlarini ishlab chiqamiz.
+              </p>
+            </div>
 
-            {/* Stylized Laptop & Display Mockup (Oldingi Asl Mockup) */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative overflow-hidden">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-blue-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-sky-400"></div>
+            {/* 5 Core Modules from Image */}
+            <div className="space-y-4 pt-1">
+              <div className="flex items-start gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
                 </div>
-                <span className="text-xs font-mono text-slate-400">https://your-platform.uz</span>
-              </div>
-
-              <div className="py-6 space-y-3">
-                <div className="h-4 bg-blue-500/30 rounded w-3/4 animate-pulse"></div>
-                <div className="h-3 bg-slate-800 rounded w-full"></div>
-                <div className="h-3 bg-slate-800 rounded w-5/6"></div>
-                <div className="grid grid-cols-3 gap-2.5 pt-3">
-                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
-                    Payme / Click
-                  </div>
-                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
-                    CRM Tizimi
-                  </div>
-                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
-                    1C ERP Sync
-                  </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">Bosh sahifa (Homepage)</h4>
+                  <p className="text-sm text-slate-400">Yangi kolleksiyalar, aksiyalar, brendlar taqdimoti va tezkor qidiruv.</p>
                 </div>
               </div>
 
-              <div className="pt-2 flex items-center justify-between text-xs font-bold text-slate-300">
-                <span>⚡ Next.js 14 & Node.js</span>
-                <span>🔒 100% SSL & Anti-DDoS</span>
+              <div className="flex items-start gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">Mahsulot sahifasi (Product Detail Page)</h4>
+                  <p className="text-sm text-slate-400">Rasmlar galereyasi, o'lchamlar, ranglar, narxlar va mijozlar sharhlari.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">Kategoriyalar va Filtrlar (Category Page)</h4>
+                  <p className="text-sm text-slate-400">Narx, brend, o'lcham va toifalar bo'yicha aqlli saralash tizimi.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">Savatcha va To'lov (Cart & Checkout)</h4>
+                  <p className="text-sm text-slate-400">Payme, Click, Uzum, Visa va MasterCard orqali xavfsiz to'lovlar.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">100% Mobil Moslashuvchan (Mobile Responsive)</h4>
+                  <p className="text-sm text-slate-400">Barcha turdagi smartfon va planshetlarda qulay xarid qilish.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: 4 Sub-services Cards */}
-          <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {t.threeSections.section1.items.map((item, idx) => (
-              <div key={idx} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500 hover:shadow-xl transition-all duration-300 space-y-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="p-3.5 rounded-2xl bg-blue-500/15 text-blue-400">
-                    {idx === 0 && <ShoppingCart className="w-6 h-6" />}
-                    {idx === 1 && <Database className="w-6 h-6" />}
-                    {idx === 2 && <Globe2 className="w-6 h-6" />}
-                    {idx === 3 && <Cpu className="w-6 h-6" />}
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full bg-slate-800 text-blue-300 border border-slate-700 text-[11px] font-bold">
-                    {item.tag}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white">{item.name}</h3>
-                <p className="text-sm text-slate-300 font-normal leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          {/* Right Column: User's Exact E-Commerce Template Image */}
+          <div className="lg:col-span-7 w-full">
+            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
+              <img 
+                src="/ecommerce-showcase.png" 
+                alt="E-Commerce Website Template" 
+                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>
