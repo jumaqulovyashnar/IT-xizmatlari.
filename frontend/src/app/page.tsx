@@ -176,20 +176,101 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: E-Commerce Image Showcase */}
+          {/* Right Column: High-End Native Interactive E-Commerce UI Mockup */}
           <div className="lg:w-6/12 w-full">
-            <div className="relative rounded-3xl border-2 border-blue-500/40 bg-slate-900 p-2 sm:p-3 shadow-2xl shadow-blue-500/10 overflow-hidden group hover:border-blue-400 transition-all duration-300">
-              <img 
-                src="/ecommerce-template.png" 
-                alt="E-Commerce Website Template" 
-                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.02] transition-transform duration-500"
-              />
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-950/85 backdrop-blur border border-slate-700/80 flex items-center justify-between text-xs font-bold text-slate-200">
+            <div className="rounded-[32px] border-2 border-blue-500/40 bg-slate-900 shadow-2xl shadow-blue-500/20 overflow-hidden relative group">
+              {/* Browser Header Bar */}
+              <div className="px-5 py-3.5 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                </div>
+                <div className="px-4 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300 flex items-center gap-1.5 shadow-inner">
+                  <span className="text-emerald-400">🔒</span> https://shop-store.uz
+                </div>
+                <div className="flex items-center space-x-2 text-slate-400 text-xs">
+                  <ShoppingCart className="w-4 h-4 text-blue-400" />
+                  <span className="w-4 h-4 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center">3</span>
+                </div>
+              </div>
+
+              {/* Store Hero Banner */}
+              <div className="p-5 sm:p-6 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950/40 border-b border-slate-800 space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="font-black text-xl tracking-tighter text-white">SHOP.UZ</span>
+                  <div className="flex gap-3 text-xs font-semibold text-slate-300">
+                    <span className="hover:text-blue-400 cursor-pointer">Erkaklar</span>
+                    <span className="hover:text-blue-400 cursor-pointer">Ayollar</span>
+                    <span className="hover:text-blue-400 cursor-pointer">Brendlar</span>
+                  </div>
+                </div>
+
+                <div className="py-3 space-y-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider">
+                    Yangi Kolleksiya 2026
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
+                    FIND CLOTHES THAT <br />
+                    <span className="text-blue-400">MATCHES YOUR STYLE</span>
+                  </h3>
+                  <p className="text-xs text-slate-300 max-w-sm font-normal">
+                    2,000+ dan ortiq original brend kiyimlari, poyabzal va aksessuarlar.
+                  </p>
+                </div>
+
+                {/* Brand Strip */}
+                <div className="pt-2 flex flex-wrap gap-4 items-center justify-between text-[11px] font-black uppercase tracking-widest text-slate-400 border-t border-slate-800/80">
+                  <span>VERSACE</span>
+                  <span>ZARA</span>
+                  <span>GUCCI</span>
+                  <span>PRADA</span>
+                  <span>CALVIN KLEIN</span>
+                </div>
+              </div>
+
+              {/* Product Cards Grid inside Mockup */}
+              <div className="p-5 bg-slate-950 grid grid-cols-2 gap-4">
+                {/* Product 1 */}
+                <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 hover:border-blue-500/50 transition-all">
+                  <div className="h-28 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-4xl relative overflow-hidden">
+                    👕
+                    <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-blue-600 text-white text-[9px] font-bold">-20%</span>
+                  </div>
+                  <div className="font-bold text-xs text-white truncate">Graphic Cotton T-Shirt</div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-extrabold text-sm text-blue-400">180,000 UZS</span>
+                    <span className="text-[10px] text-amber-400 font-bold">★★★★★</span>
+                  </div>
+                  <button className="w-full py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-colors">
+                    Savatga qo'shish
+                  </button>
+                </div>
+
+                {/* Product 2 */}
+                <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 hover:border-blue-500/50 transition-all">
+                  <div className="h-28 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-4xl relative overflow-hidden">
+                    👖
+                    <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[9px] font-bold">TOP</span>
+                  </div>
+                  <div className="font-bold text-xs text-white truncate">Skinny Fit Denim Jeans</div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-extrabold text-sm text-blue-400">320,000 UZS</span>
+                    <span className="text-[10px] text-amber-400 font-bold">★★★★★</span>
+                  </div>
+                  <button className="w-full py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-colors">
+                    Savatga qo'shish
+                  </button>
+                </div>
+              </div>
+
+              {/* Bottom Live Order Bar */}
+              <div className="p-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs font-bold text-slate-300">
                 <span className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
-                  E-Commerce Template & Fullstack Architecture
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span className="text-emerald-400">Payme / Click / Uzum</span> orqali 1-klikda to'lov
                 </span>
-                <span className="text-blue-400 font-extrabold">Next.js 14</span>
+                <span className="text-blue-400 font-extrabold">Next.js 14 Store</span>
               </div>
             </div>
           </div>
