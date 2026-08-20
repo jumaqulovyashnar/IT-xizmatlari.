@@ -102,80 +102,60 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 1-CHI BO'LIM: E-COMMERCE VEB-SAYTLAR VA ONLAYN DO'KONLAR                  */}
       {/* ========================================================================= */}
-      <section id="section-websites" className="py-28 px-4 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: E-Commerce Detailed Information */}
-          <div className="lg:col-span-5 space-y-7">
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-                E-Commerce Veb-Saytlar va Onlayn Do'konlar
+      <section 
+        id="section-websites" 
+        aria-labelledby="websites-heading"
+        className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Column: E-Commerce Detailed Information (5 cols) */}
+          <div className="lg:col-span-5 space-y-8">
+            <div className="space-y-4">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/10 text-blue-400 border border-blue-500/20 text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-blue-400" /> E-Commerce & Web Platform
+              </span>
+              <h2 
+                id="websites-heading"
+                className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.15]"
+              >
+                {t.threeSections.section1.title}
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                Kompaniyangiz mahsulot va tovarlarini internet orqali avtomatlashtirilgan tarzda sotish uchun to'liq funksional E-Commerce tizimlarini ishlab chiqamiz.
+              <p className="text-slate-300/80 text-base sm:text-lg leading-[1.6] font-normal max-w-xl">
+                {t.threeSections.section1.desc}
               </p>
             </div>
 
-            {/* 5 Core Modules from Image */}
-            <div className="space-y-4 pt-1">
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white">Bosh sahifa (Homepage)</h4>
-                  <p className="text-sm text-slate-400">Yangi kolleksiyalar, aksiyalar, brendlar taqdimoti va tezkor qidiruv.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white">Mahsulot sahifasi (Product Detail Page)</h4>
-                  <p className="text-sm text-slate-400">Rasmlar galereyasi, o'lchamlar, ranglar, narxlar va mijozlar sharhlari.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white">Kategoriyalar va Filtrlar (Category Page)</h4>
-                  <p className="text-sm text-slate-400">Narx, brend, o'lcham va toifalar bo'yicha aqlli saralash tizimi.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white">Savatcha va To'lov (Cart & Checkout)</h4>
-                  <p className="text-sm text-slate-400">Payme, Click, Uzum, Visa va MasterCard orqali xavfsiz to'lovlar.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white">100% Mobil Moslashuvchan (Mobile Responsive)</h4>
-                  <p className="text-sm text-slate-400">Barcha turdagi smartfon va planshetlarda qulay xarid qilish.</p>
-                </div>
-              </div>
-            </div>
+            {/* Semantic Checklist with Micro-Interactions */}
+            <ul className="space-y-2.5 list-none p-0 m-0">
+              {t.threeSections.section1.features.map((feat, idx) => (
+                <li 
+                  key={idx}
+                  className="flex items-start gap-4 p-3 -mx-3 rounded-2xl transition-all duration-200 ease-out hover:bg-slate-900/60 hover:translate-x-1.5 group cursor-default"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-blue-600/10 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 transition-all duration-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 group-hover:shadow-lg group-hover:shadow-blue-600/30">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <div className="space-y-0.5">
+                    <h3 className="text-base font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                      {feat.title}
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed font-normal">
+                      {feat.desc}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Right Column: User's Exact E-Commerce Template Image */}
+          {/* Right Column: Refined Glass/Ambient Shadow Showcase (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
+            <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-slate-800/40 to-slate-900/60 p-2 sm:p-2.5 border border-slate-800/80 shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_30px_rgba(37,99,235,0.12)] backdrop-blur-sm transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.6),_0_0_45px_rgba(37,99,235,0.2)] hover:border-slate-700/80 group">
               <img 
                 src="/ecommerce-showcase.png" 
-                alt="E-Commerce Website Template" 
-                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
+                alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
+                className="w-full h-auto rounded-xl sm:rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.008]"
+                loading="lazy"
               />
             </div>
           </div>
