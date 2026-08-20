@@ -413,36 +413,57 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900/90 border-t border-slate-800 text-slate-300 mt-auto py-12 px-6 sm:px-10 lg:px-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Brand Logo & Slogan */}
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black shadow-lg shadow-blue-500/30">
-              <Laptop className="w-5 h-5" />
-            </div>
-            <div>
-              <span className="font-extrabold text-xl tracking-tight text-white block">
-                {t.brandName}
-              </span>
-              <span className="text-xs text-slate-400 font-medium">
-                Veb-saytlar • Mobil Ilovalar • Landing Page
-              </span>
+      <footer className="bg-slate-950 border-t border-slate-800/80 text-slate-300 mt-auto py-14 px-6 sm:px-10 lg:px-16 w-full">
+        <div className="max-w-7xl mx-auto space-y-8">
+          {/* Top Row: Brand & Direct Contacts */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/60">
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+                <Laptop className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-blue-400 transition-colors block">
+                  {t.brandName}
+                </span>
+                <span className="text-xs text-slate-400 font-medium">
+                  Veb-saytlar • Mobil Ilovalar • Landing Page
+                </span>
+              </div>
+            </Link>
+
+            <div className="flex items-center gap-4 sm:gap-6">
+              <a 
+                href="https://t.me/yashnar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-blue-600/15 border border-blue-500/30 text-blue-400 hover:bg-blue-600 hover:text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+              >
+                <span>Telegram: @yashnar</span>
+                <span>↗</span>
+              </a>
+              <a 
+                href="tel:+998919517335" 
+                className="text-xs font-mono font-bold text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1.5"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-blue-400" />
+                <span>+998 91 951 73 35</span>
+              </a>
             </div>
           </div>
 
-          {/* Quick Nav Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-bold text-slate-300">
-            <a href="#" className="hover:text-blue-400 transition-colors">{t.nav.home}</a>
-            <a href="#section-websites" className="hover:text-blue-400 transition-colors">{t.nav.web}</a>
-            <a href="#section-mobile" className="hover:text-blue-400 transition-colors">{t.nav.mobile}</a>
-            <a href="#section-landing" className="hover:text-blue-400 transition-colors">{t.nav.landing}</a>
-            <a href="#section-projects" className="hover:text-blue-400 transition-colors">{t.nav.projects}</a>
-            <a href="https://t.me/yashnar" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Telegram (@yashnar)</a>
-          </div>
+          {/* Bottom Row: Quick Nav Links & Copyright */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+            <div className="flex flex-wrap items-center justify-center gap-7 font-bold text-xs sm:text-sm">
+              <a href="#" className="hover:text-white transition-colors">{t.nav.home}</a>
+              <a href="#section-websites" className="hover:text-white transition-colors">{t.nav.web}</a>
+              <a href="#section-mobile" className="hover:text-white transition-colors">{t.nav.mobile}</a>
+              <a href="#section-landing" className="hover:text-white transition-colors">{t.nav.landing}</a>
+              <a href="#section-projects" className="hover:text-white transition-colors">{t.nav.projects}</a>
+            </div>
 
-          {/* Copyright */}
-          <div className="text-center md:text-right text-xs text-slate-400 font-medium">
-            <p>© 2026 IT Xizmatlar. Barcha huquqlar himoyalangan.</p>
+            <p className="text-xs text-slate-400 font-normal text-center md:text-right">
+              © 2026 IT Xizmatlar. Barcha huquqlar himoyalangan.
+            </p>
           </div>
         </div>
       </footer>
