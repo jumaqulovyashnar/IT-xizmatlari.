@@ -35,12 +35,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-base-100 text-base-content flex flex-col transition-colors duration-300">
-      {/* Top Banner / Slogan */}
-      <div className="bg-primary text-primary-content py-2 px-4 text-center text-xs font-bold tracking-widest uppercase shadow-sm flex items-center justify-center gap-3">
-        <Sparkles className="w-4 h-4 animate-spin" />
-        <span>{t.slogan} — {t.subSlogan}</span>
-        <Sparkles className="w-4 h-4 animate-spin" />
-      </div>
+
 
       {/* Navbar */}
       <header className="navbar bg-base-200/90 backdrop-blur border-b border-base-300 sticky top-0 z-50 px-4 sm:px-8">
