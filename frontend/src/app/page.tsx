@@ -314,9 +314,6 @@ export default function HomePage() {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/15 text-blue-400 border border-blue-600/30 text-xs font-black uppercase tracking-wider">
-              <Sparkles className="w-4 h-4" /> Portfel & Loyihalar
-            </div>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
               {t.projectsSection.title}
             </h2>
