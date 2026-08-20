@@ -149,33 +149,33 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-3.5">
+            <div className="space-y-4">
               <h2 
                 id="websites-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.2]"
               >
                 {t.threeSections.section1.title}
               </h2>
-              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-relaxed font-medium">
                 {t.threeSections.section1.desc}
               </p>
             </div>
 
             {/* Feature List to perfectly balance vertical height */}
-            <div className="space-y-4 pt-1">
+            <div className="space-y-4 sm:space-y-5 pt-2">
               {t.threeSections.section1.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
+                  className="flex items-start gap-4 p-2.5 -mx-2.5 rounded-2xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <CheckCircle2 className="w-4.5 h-4.5" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[17px] sm:text-[18px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13.5px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                       {feat.desc}
                     </p>
                   </div>
@@ -227,33 +227,33 @@ export default function HomePage() {
 
           {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
           <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
-            <div className="space-y-3.5">
+            <div className="space-y-4">
               <h2 
                 id="mobile-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.2]"
               >
                 {t.threeSections.section2.title}
               </h2>
-              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-relaxed font-medium">
                 {t.threeSections.section2.desc}
               </p>
             </div>
 
             {/* Feature List matching vertical height */}
-            <div className="space-y-4 pt-1">
+            <div className="space-y-4 sm:space-y-5 pt-2">
               {t.threeSections.section2.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
+                  className="flex items-start gap-4 p-2.5 -mx-2.5 rounded-2xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <CheckCircle2 className="w-4.5 h-4.5" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[17px] sm:text-[18px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13.5px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                       {feat.desc}
                     </p>
                   </div>
@@ -275,33 +275,33 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-3.5">
+            <div className="space-y-4">
               <h2 
                 id="landing-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.18]"
+                className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-slate-900 dark:text-white leading-[1.2]"
               >
                 {t.threeSections.section3.title}
               </h2>
-              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-[1.7] font-medium">
+              <p className="text-slate-600 dark:text-slate-200 text-base sm:text-[17px] leading-relaxed font-medium">
                 {t.threeSections.section3.desc}
               </p>
             </div>
 
             {/* Feature List matching vertical height */}
-            <div className="space-y-4 pt-1">
+            <div className="space-y-4 sm:space-y-5 pt-2">
               {t.threeSections.section3.features.map((feat, idx) => (
                 <div 
                   key={idx}
-                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
+                  className="flex items-start gap-4 p-2.5 -mx-2.5 rounded-2xl transition-all duration-200 hover:bg-slate-200/60 dark:hover:bg-slate-900/60 group"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <CheckCircle2 className="w-4.5 h-4.5" />
+                  <div className="w-9 h-9 rounded-xl bg-blue-600/15 dark:bg-blue-600/20 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] sm:text-[17px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-[17px] sm:text-[18px] font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-0.5">
+                    <p className="text-[13.5px] sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                       {feat.desc}
                     </p>
                   </div>
