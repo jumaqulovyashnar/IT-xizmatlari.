@@ -146,9 +146,9 @@ export default function HomePage() {
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative"
       >
         {/* Two-Column Industrial Grid matching exact 100% height */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3.5">
               <h2 
                 id="websites-heading"
@@ -185,22 +185,16 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
-          <div className="lg:col-span-7 w-full flex flex-col">
-            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none h-full flex flex-col justify-between">
+          <div className="lg:col-span-7 w-full">
+            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative flex-1 w-full min-h-[460px] sm:min-h-[500px] lg:min-h-[530px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                 />
-              </div>
-
-              {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                <span>SCALE: 100% // PRODUCTION TEMPLATE</span>
-                <span className="text-blue-600 dark:text-blue-400 font-bold">100% RESPONSIVE</span>
               </div>
             </div>
           </div>
@@ -215,12 +209,12 @@ export default function HomePage() {
         aria-labelledby="mobile-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Precision Graphic Framed Mobile Image (7 cols) */}
-          <div className="lg:col-span-7 w-full order-2 lg:order-1 flex flex-col">
-            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none h-full flex flex-col justify-between">
+          <div className="lg:col-span-7 w-full order-2 lg:order-1">
+            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative flex-1 w-full min-h-[460px] sm:min-h-[500px] lg:min-h-[530px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/mobile-showcase.png" 
                   alt="Mobile App Showcase" 
@@ -228,17 +222,11 @@ export default function HomePage() {
                   loading="lazy"
                 />
               </div>
-
-              {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                <span>SCALE: 100% // PRODUCTION APP</span>
-                <span className="text-blue-600 dark:text-blue-400 font-bold">iOS & ANDROID</span>
-              </div>
             </div>
           </div>
 
           {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 order-1 lg:order-2">
+          <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
             <div className="space-y-3.5">
               <h2 
                 id="mobile-heading"
@@ -284,9 +272,9 @@ export default function HomePage() {
         aria-labelledby="landing-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3.5">
               <h2 
                 id="landing-heading"
@@ -323,22 +311,16 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Precision Graphic Framed Landing Page Image (7 cols) */}
-          <div className="lg:col-span-7 w-full flex flex-col">
-            <div className="relative rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-400 dark:hover:border-slate-700 group shadow-lg dark:shadow-none h-full flex flex-col justify-between">
+          <div className="lg:col-span-7 w-full">
+            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative flex-1 w-full min-h-[460px] sm:min-h-[500px] lg:min-h-[530px] rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/landing-showcase.png" 
                   alt="Landing Page Website Showcase" 
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                 />
-              </div>
-
-              {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                <span>SCALE: 100% // PRODUCTION LANDING</span>
-                <span className="text-blue-600 dark:text-blue-400 font-bold">HIGH CONVERTING</span>
               </div>
             </div>
           </div>
