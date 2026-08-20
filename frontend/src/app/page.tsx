@@ -332,12 +332,12 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="group rounded-3xl bg-slate-900/90 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2"
               >
-                {/* Large Screenshot Image */}
-                <div className="w-full h-56 sm:h-64 lg:h-72 overflow-hidden bg-slate-950 border-b border-slate-800/80 relative">
+                {/* Large Screenshot Image - 100% Fully Visible */}
+                <div className="w-full h-56 sm:h-64 lg:h-68 overflow-hidden bg-slate-950 border-b border-slate-800/80 p-3 flex items-center justify-center">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
