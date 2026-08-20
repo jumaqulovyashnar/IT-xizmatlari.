@@ -308,9 +308,9 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - KATTA O'LCHAM)     */}
+      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - ULTRA KATTA EN)    */}
       {/* ========================================================================= */}
-      <section id="section-projects" className="py-28 px-4 sm:px-8 lg:px-12 max-w-[1440px] mx-auto w-full border-t border-slate-800/80">
+      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto w-full border-t border-slate-800/80">
         <div className="space-y-14">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
@@ -322,8 +322,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 4 Large Cards in 1 Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {/* 4 Large Cards in 1 Row with +50px width */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
             {t.projectsSection.items.map((proj, idx) => (
               <a 
                 key={idx}
