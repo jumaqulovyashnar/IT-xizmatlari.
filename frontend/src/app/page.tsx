@@ -308,10 +308,10 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA)                     */}
+      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - MAKSIMAL KENG EN)  */}
       {/* ========================================================================= */}
-      <section id="section-projects" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full border-t border-slate-800/80">
-        <div className="space-y-12">
+      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 xl:px-10 max-w-[1840px] mx-auto w-full border-t border-slate-800/80">
+        <div className="space-y-14">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
@@ -322,8 +322,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 4 Cards in 1 Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 Extra-Wide Cards in 1 Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {t.projectsSection.items.map((proj, idx) => (
               <a 
                 key={idx}
@@ -333,7 +333,7 @@ export default function HomePage() {
                 className="group rounded-3xl bg-slate-900/90 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2"
               >
                 {/* Large Screenshot Image - 100% Fully Visible */}
-                <div className="w-full h-56 sm:h-64 lg:h-68 overflow-hidden bg-slate-950 border-b border-slate-800/80 p-3 flex items-center justify-center">
+                <div className="w-full h-60 sm:h-68 lg:h-76 overflow-hidden bg-slate-950 border-b border-slate-800/80 p-3.5 flex items-center justify-center">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
