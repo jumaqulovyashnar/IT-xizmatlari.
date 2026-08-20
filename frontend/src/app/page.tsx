@@ -21,7 +21,10 @@ import {
   Check, 
   ChevronRight,
   TrendingUp,
-  BarChart3
+  BarChart3,
+  Sparkles,
+  ArrowRight,
+  ExternalLink
 } from "lucide-react";
 
 export default function HomePage() {
@@ -50,6 +53,7 @@ export default function HomePage() {
             <li><a href="#section-websites" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.web}</a></li>
             <li><a href="#section-mobile" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.mobile}</a></li>
             <li><a href="#section-landing" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.landing}</a></li>
+            <li><a href="#section-projects" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.projects}</a></li>
             <li><a href="#section-contact" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.contact}</a></li>
           </ul>
         </div>
@@ -310,6 +314,72 @@ export default function HomePage() {
                 ⚡ Google PageSpeed 99/100
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA)                     */}
+      {/* ========================================================================= */}
+      <section id="section-projects" className="py-28 px-4 max-w-7xl mx-auto w-full border-t border-slate-800/80">
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/15 text-blue-400 border border-blue-600/30 text-xs font-black uppercase tracking-wider">
+              <Sparkles className="w-4 h-4" /> Portfel & Loyihalar
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+              {t.projectsSection.title}
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg">
+              {t.projectsSection.subtitle}
+            </p>
+          </div>
+
+          {/* 4 Cards in 1 Row (grid-cols-1 sm:grid-cols-2 lg:grid-cols-4) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {t.projectsSection.items.map((proj, idx) => (
+              <a 
+                key={idx}
+                href={proj.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-3xl bg-slate-900 border-2 border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5"
+              >
+                {/* Screenshot Image */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 border-b border-slate-800">
+                  <img 
+                    src={proj.image} 
+                    alt={proj.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/90 backdrop-blur border border-slate-700 text-blue-400 text-[10px] font-extrabold flex items-center gap-1 shadow-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <span>Ko'rish</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </div>
+                </div>
+
+                {/* Info Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                  <div className="space-y-2">
+                    <span className="text-[11px] font-bold text-blue-400 uppercase tracking-wider block">
+                      {proj.category}
+                    </span>
+                    <h3 className="text-lg font-black text-white group-hover:text-blue-400 transition-colors">
+                      {proj.title}
+                    </h3>
+                    <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                      {proj.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-300">
+                    <span className="text-slate-400 font-mono text-[11px] truncate max-w-[170px]">{proj.link.replace("https://", "")}</span>
+                    <span className="text-blue-400 font-black">↗</span>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

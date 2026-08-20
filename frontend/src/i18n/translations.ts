@@ -13,6 +13,7 @@ export const translations = {
       web: "Veb-saytlar",
       mobile: "Mobil Ilovalar",
       landing: "Lending Saytlar",
+      projects: "Bizning Loyihalar",
       contact: "Aloqa",
       orderNow: "Buyurtma berish",
     },
@@ -24,35 +25,53 @@ export const translations = {
       orderBtn: "Loyiha Bo'yicha Maslahat",
       viewServices: "Xizmatlarimiz",
     },
+    projectsSection: {
+      title: "Bizning Bajarilgan Loyihalar",
+      subtitle: "Biz yaratgan haqiqiy ishlayotgan muvaffaqiyatli loyihalar bilan tanishing. Ko'rish uchun kartochkaga bosing.",
+      items: [
+        {
+          title: "Lotos Field Travel",
+          category: "Turizm & Sayohat Platformasi",
+          link: "https://travel.lotosfield.uz",
+          image: "/projects/project1-travel.png",
+          desc: "All-Inclusive turlar, ko'p tilli interaktiv sayyohlik platformasi."
+        },
+        {
+          title: "Al-Hakim At-Termiziy",
+          category: "Ta'lim & O'quv Markazi",
+          link: "https://edu.lotosfield.uz",
+          image: "/projects/project2-edu.png",
+          desc: "Xorijiy tillar va xalqaro metodika bo'yicha ta'lim portali."
+        },
+        {
+          title: "O'rgimchak Taxi",
+          category: "Taksi & Transport Xizmati",
+          link: "https://taxi-landing-page-five.vercel.app",
+          image: "/projects/project3-taxi.png",
+          desc: "Tezkor, qulay va xavfsiz safarlar uchun premium taksi lendingi."
+        },
+        {
+          title: "Arxitektura Byurosi",
+          category: "Arxitektura & Interyer",
+          link: "https://architectury.lotosfield.uz",
+          image: "/projects/project4-arch.png",
+          desc: "Zamonaviy fazoviy yechimlar va eksklyuziv arxitektura byurosi."
+        }
+      ]
+    },
     threeSections: {
       section1: {
-        title: "Zamonaviy Web Saytlar va Katta Tizimlar",
-        desc: "Har qanday murakkablikdagi kengaytiriladigan korporativ veb-platformalar, xavfsiz va tezkor arxitektura.",
-        items: [
-          {
-            name: "E-Commerce (Internet Do'konlar)",
-            desc: "Payme, Click, Uzum to'lovlari, qulay savat, ombor va tovarlar hisobi, tezkor qidiruv.",
-            tag: "Savdo va Do'kon"
-          },
-          {
-            name: "CRM va ERP Tizimlar",
-            desc: "Mijozlar bazasi, savdo voronkasi, xodimlar vazifalari va moliyaviy hisobotlarni avtomatlashtirish.",
-            tag: "Boshqaruv & Avtomatlashtirish"
-          },
-          {
-            name: "Korporativ Veb-Portallar",
-            desc: "Kompaniya imidjini oshiruvchi, ko'p tilli, interaktiv mijozlar shaxsiy kabineti bilan.",
-            tag: "Korporativ Imidj"
-          },
-          {
-            name: "Maxsus Integratsiyalar va API",
-            desc: "1C buxgalteriya, Telegram botlar, SMS xabarnomalar va to'lov tizimlari bilan to'liq bog'lash.",
-            tag: "Integratsiyalar"
-          }
+        title: "E-Commerce va Zamonaviy Veb-Saytlar",
+        desc: "Kompaniyangiz mahsulot va tovarlarini internet orqali avtomatlashtirilgan tarzda sotish uchun to'liq funksional E-Commerce tizimlarini ishlab chiqamiz.",
+        features: [
+          { title: "Bosh sahifa (Homepage)", desc: "Yangi kolleksiyalar, aksiyalar, brendlar taqdimoti va tezkor qidiruv." },
+          { title: "Mahsulot sahifasi (Product Detail Page)", desc: "Rasmlar galereyasi, o'lchamlar, ranglar, narxlar va mijozlar sharhlari." },
+          { title: "Kategoriyalar va Filtrlar (Category Page)", desc: "Narx, brend, o'lcham va toifalar bo'yicha aqlli saralash tizimi." },
+          { title: "Savatcha va To'lov (Cart & Checkout)", desc: "Payme, Click, Uzum, Visa va MasterCard orqali xavfsiz to'lovlar." },
+          { title: "100% Mobil Moslashuvchan (Mobile Responsive)", desc: "Barcha turdagi smartfon va planshetlarda qulay xarid qilish." }
         ]
       },
       section2: {
-        badge: "MOBIL ILOVALAR",
         title: "Mobil Ilovalar (iOS & Android)",
         desc: "Foydalanuvchilar uchun qulay, chiroyli UI/UX dizaynga ega hamda App Store va Google Play uchun optimallashtirilgan mobil dasturlar.",
         features: [
@@ -65,7 +84,6 @@ export const translations = {
         stats: "100K+ Yuklab olishlarga mos arxitektura"
       },
       section3: {
-        badge: "LENDING SAYTLAR",
         title: "Yuqori Konversiyali Lending Saytlar",
         desc: "Mahsulot yoki xizmatingizni birinchi daqiqalardanoq sotishga mo'ljallangan, zamonaviy va ultra-tezkor sotuvchi saytlar.",
         features: [
@@ -113,6 +131,7 @@ export const translations = {
       web: "Websites",
       mobile: "Mobile Apps",
       landing: "Landing Pages",
+      projects: "Our Projects",
       contact: "Contact",
       orderNow: "Get in Touch",
     },
@@ -124,35 +143,53 @@ export const translations = {
       orderBtn: "Get Free Consultation",
       viewServices: "Our Solutions",
     },
+    projectsSection: {
+      title: "Our Delivered Projects",
+      subtitle: "Explore our real, production-ready digital products. Click on any card to visit the live site.",
+      items: [
+        {
+          title: "Lotos Field Travel",
+          category: "Tourism & Travel Platform",
+          link: "https://travel.lotosfield.uz",
+          image: "/projects/project1-travel.png",
+          desc: "All-inclusive tour packages, interactive multilingual travel portal."
+        },
+        {
+          title: "Al-Hakim At-Termiziy",
+          category: "Education & Learning Center",
+          link: "https://edu.lotosfield.uz",
+          image: "/projects/project2-edu.png",
+          desc: "Foreign languages and comprehensive 28-month curriculum portal."
+        },
+        {
+          title: "O'rgimchak Taxi",
+          category: "Taxi & Mobility Solution",
+          link: "https://taxi-landing-page-five.vercel.app",
+          image: "/projects/project3-taxi.png",
+          desc: "High-converting landing page for fast and safe urban taxi rides."
+        },
+        {
+          title: "Architecture Bureau",
+          category: "Architecture & Interior Design",
+          link: "https://architectury.lotosfield.uz",
+          image: "/projects/project4-arch.png",
+          desc: "Exclusive spatial architecture, 3D renders, and turnkey project planning."
+        }
+      ]
+    },
     threeSections: {
       section1: {
-        title: "Modern Websites & Enterprise Web Systems",
-        desc: "Scalable corporate web platforms, secure payment architectures, and responsive digital products.",
-        items: [
-          {
-            name: "E-Commerce Platforms",
-            desc: "Payme, Click, Stripe checkout, cart, warehouse and inventory synchronization, lightning search.",
-            tag: "E-Commerce & Retail"
-          },
-          {
-            name: "CRM & ERP Systems",
-            desc: "Customer base, automated sales pipelines, task management, and executive financial dashboards.",
-            tag: "Enterprise ERP & CRM"
-          },
-          {
-            name: "Corporate Web Portals",
-            desc: "Multilingual, interactive customer accounts, and strong brand presence.",
-            tag: "Corporate Portal"
-          },
-          {
-            name: "Custom Integrations & APIs",
-            desc: "1C ERP, Telegram bots, SMS gateways, and secure banking webhook connectors.",
-            tag: "API Integrations"
-          }
+        title: "E-Commerce & Modern Websites",
+        desc: "We develop high-converting online stores, retail marketplaces, and robust web applications tailored for digital commerce.",
+        features: [
+          { title: "Homepage", desc: "Showcase new collections, sales, brands, and instant global search." },
+          { title: "Product Detail Page", desc: "High-res gallery, size/color selectors, reviews, and detailed specs." },
+          { title: "Category Page & Filters", desc: "Smart filters by price, brand, rating, and product attributes." },
+          { title: "Cart & Checkout", desc: "Instant and secure Payme, Click, Stripe, Visa, and MasterCard checkout." },
+          { title: "100% Mobile Responsive", desc: "Optimized for frictionless shopping on any mobile phone or tablet." }
         ]
       },
       section2: {
-        badge: "MOBILE APPS",
         title: "Mobile App Development (iOS & Android)",
         desc: "Intuitive UI/UX, blazingly fast mobile applications published and maintained on App Store and Google Play.",
         features: [
@@ -165,7 +202,6 @@ export const translations = {
         stats: "Built for 100K+ concurrent users"
       },
       section3: {
-        badge: "LANDING PAGES",
         title: "High-Converting Landing Pages",
         desc: "Ultra-fast, conversion-optimized landing pages designed to turn visitors into paying customers from day one.",
         features: [
@@ -213,6 +249,7 @@ export const translations = {
       web: "Веб-сайты",
       mobile: "Мобильные приложения",
       landing: "Лендинги",
+      projects: "Наши Проекты",
       contact: "Контакты",
       orderNow: "Связаться с нами",
     },
@@ -224,35 +261,53 @@ export const translations = {
       orderBtn: "Получить Консультацию",
       viewServices: "Наши Услуги",
     },
+    projectsSection: {
+      title: "Наши Реализованные Проекты",
+      subtitle: "Ознакомьтесь с реальными проектами, которые мы успешно запустили. Нажмите на карточку для перехода на сайт.",
+      items: [
+        {
+          title: "Lotos Field Travel",
+          category: "Туристическая Платформа",
+          link: "https://travel.lotosfield.uz",
+          image: "/projects/project1-travel.png",
+          desc: "All-Inclusive туры, многоязычный интерактивный туристический портал."
+        },
+        {
+          title: "Al-Hakim At-Termiziy",
+          category: "Образовательный Центр",
+          link: "https://edu.lotosfield.uz",
+          image: "/projects/project2-edu.png",
+          desc: "Образовательный портал изучения иностранных языков по спецметодике."
+        },
+        {
+          title: "O'rgimchak Taxi",
+          category: "Служба Такси и Транспорта",
+          link: "https://taxi-landing-page-five.vercel.app",
+          image: "/projects/project3-taxi.png",
+          desc: "Продающий лендинг для быстрого и безопасного вызова такси."
+        },
+        {
+          title: "Архитектурное Бюро",
+          category: "Архитектура и Интерьер",
+          link: "https://architectury.lotosfield.uz",
+          image: "/projects/project4-arch.png",
+          desc: "Современные архитектурные решения и 3D-визуализация под ключ."
+        }
+      ]
+    },
     threeSections: {
       section1: {
-        title: "Современные Веб-Сайты и Масштабные Системы",
-        desc: "Корпоративные платформы любой сложности, высокая безопасность, быстрая и отказоустойчивая архитектура.",
-        items: [
-          {
-            name: "E-Commerce (Интернет-Магазины)",
-            desc: "Интеграция Payme, Click, корзина, учет склада и товаров, умный поиск.",
-            tag: "Онлайн Торговля"
-          },
-          {
-            name: "CRM и ERP Системы",
-            desc: "База клиентов, воронка продаж, управление задачами сотрудников и финансовые отчеты.",
-            tag: "Автоматизация Бизнеса"
-          },
-          {
-            name: "Корпоративные Веб-Порталы",
-            desc: "Многоязычные порталы с личным кабинетом клиентов и безупречным имиджем компании.",
-            tag: "Корпоративный Имидж"
-          },
-          {
-            name: "Интеграции и API",
-            desc: "Связка с 1С, Telegram-ботами, SMS-шлюзами и банковскими системами.",
-            tag: "Интеграции"
-          }
+        title: "E-Commerce и Современные Веб-Сайты",
+        desc: "Разрабатываем современные интернет-магазины, платформы онлайн-торговли и масштабируемые корпоративные веб-системы.",
+        features: [
+          { title: "Главная страница (Homepage)", desc: "Акции, новинки, баннеры брендов и быстрый поиск." },
+          { title: "Страница товара (Product Detail Page)", desc: "Галерея фото, размеры, цвета, отзывы и описание." },
+          { title: "Категории и Фильтры (Category Page)", desc: "Удобная сортировка по цене, брендам и характеристикам." },
+          { title: "Корзина и Оплата (Cart & Checkout)", desc: "Безопасная оплата через Payme, Click, Uzum, Visa и MasterCard." },
+          { title: "100% Адаптивность (Mobile Responsive)", desc: "Идеальная работа на смартфонах и планшетах." }
         ]
       },
       section2: {
-        badge: "МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ",
         title: "Разработка Мобильных Приложений (iOS & Android)",
         desc: "Удобный интерфейс, премиальный UI/UX дизайн, публикация и сопровождение в App Store и Google Play.",
         features: [
@@ -265,7 +320,6 @@ export const translations = {
         stats: "Архитектура под 100K+ пользователей"
       },
       section3: {
-        badge: "ЛЕНДИНГИ",
         title: "Высококонверсионные Лендинги",
         desc: "Продающие одностраничные сайты нового поколения, созданные для максимального привлечения клиентов и заявок.",
         features: [
