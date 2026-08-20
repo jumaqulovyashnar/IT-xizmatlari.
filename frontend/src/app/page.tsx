@@ -172,48 +172,67 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 2-CHI BO'LIM: MOBIL ILOVALAR (iOS & ANDROID MOBILE APPS)                  */}
       {/* ========================================================================= */}
-      <section id="section-mobile" className="py-28 px-4 bg-slate-900/60 border-t border-b border-slate-800">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: User's Exact Mobile App Showcase Image */}
-          <div className="lg:col-span-7 w-full">
-            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
-              <img 
-                src="/mobile-showcase.png" 
-                alt="Mobile App Showcase" 
-                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
-              />
+      <section 
+        id="section-mobile" 
+        aria-labelledby="mobile-heading"
+        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Precision Graphic Framed Mobile Image (7 cols) */}
+          <div className="lg:col-span-7 w-full order-2 lg:order-1">
+            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+              {/* Image Frame with Graphic Precision & Increased Height */}
+              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+                <img 
+                  src="/mobile-showcase.png" 
+                  alt="Mobile App Showcase" 
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Technical Bottom Label */}
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>SCALE: 100% // PRODUCTION APP</span>
+                <span className="text-blue-400 font-bold">iOS & ANDROID</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Mobile Application Information */}
-          <div className="lg:col-span-5 space-y-7">
+          {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
+          <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+              <h2 
+                id="mobile-heading"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+              >
                 {t.threeSections.section2.title}
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base leading-[1.65] font-normal">
                 {t.threeSections.section2.desc}
               </p>
             </div>
 
-            <div className="space-y-4 pt-1">
+            {/* Feature List matching vertical height */}
+            <div className="space-y-3.5 pt-1">
               {t.threeSections.section2.features.map((feat, idx) => (
-                <div key={idx} className="flex items-start gap-3.5">
-                  <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                <div 
+                  key={idx}
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <span className="text-base font-semibold text-slate-200">{feat}</span>
+                  <div>
+                    <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                      {feat.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                      {feat.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
-            </div>
-
-            <div className="pt-2 flex flex-wrap gap-4 items-center">
-              <div className="px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-blue-300">
-                📱 Flutter • React Native • Swift • Kotlin
-              </div>
-              <div className="px-4 py-2.5 rounded-xl bg-blue-600/15 text-blue-300 border border-blue-600/30 text-xs font-black">
-                ⭐ App Store & Google Play
-              </div>
             </div>
           </div>
         </div>
@@ -222,48 +241,67 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 3-CHI BO'LIM: YUQORI KONVERSIYALI LANDING PAGE (SOTUVCHI SAYTLAR)        */}
       {/* ========================================================================= */}
-      <section id="section-landing" className="py-28 px-4 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Landing Page Image Showcase */}
-          <div className="lg:col-span-7 w-full">
-            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
-              <img 
-                src="/landing-showcase.png" 
-                alt="Landing Page Website Showcase" 
-                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
-              />
+      <section 
+        id="section-landing" 
+        aria-labelledby="landing-heading"
+        className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Precision Graphic Framed Landing Page Image (7 cols) */}
+          <div className="lg:col-span-7 w-full order-2 lg:order-1">
+            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+              {/* Image Frame with Graphic Precision & Increased Height */}
+              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+                <img 
+                  src="/landing-showcase.png" 
+                  alt="Landing Page Website Showcase" 
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Technical Bottom Label */}
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>SCALE: 100% // PRODUCTION LANDING</span>
+                <span className="text-blue-400 font-bold">HIGH CONVERTING</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Detailed Landing Page Information */}
-          <div className="lg:col-span-5 space-y-7">
+          {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
+          <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+              <h2 
+                id="landing-heading"
+                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+              >
                 {t.threeSections.section3.title}
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base leading-[1.65] font-normal">
                 {t.threeSections.section3.desc}
               </p>
             </div>
 
-            <div className="space-y-4 pt-1">
+            {/* Feature List matching vertical height */}
+            <div className="space-y-3.5 pt-1">
               {t.threeSections.section3.features.map((feat, idx) => (
-                <div key={idx} className="flex items-start gap-3.5">
-                  <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                <div 
+                  key={idx}
+                  className="flex items-start gap-3.5 p-2 -mx-2 rounded-xl transition-all duration-200 hover:bg-slate-900/60 group"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <span className="text-base font-semibold text-slate-200">{feat}</span>
+                  <div>
+                    <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
+                      {feat.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                      {feat.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
-            </div>
-
-            <div className="pt-2 flex flex-wrap gap-4 items-center">
-              <div className="px-4 py-2.5 rounded-xl bg-blue-600/15 text-blue-300 border border-blue-600/30 text-xs font-black">
-                ⏱️ {t.threeSections.section3.actionText}
-              </div>
-              <div className="px-4 py-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-black">
-                ⚡ Google PageSpeed 99/100
-              </div>
             </div>
           </div>
         </div>

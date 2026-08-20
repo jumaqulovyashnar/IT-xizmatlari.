@@ -75,11 +75,11 @@ export const translations = {
         title: "Mobil Ilovalar (iOS & Android)",
         desc: "Foydalanuvchilar uchun qulay, chiroyli UI/UX dizaynga ega hamda App Store va Google Play uchun optimallashtirilgan mobil dasturlar.",
         features: [
-          "Cross-platform (Flutter / React Native) va Native (Swift/Kotlin)",
-          "Push xabarnomalar va offline rejimda ishlash",
-          "Biometrik kirish (FaceID / TouchID) va to'lov tizimlari",
-          "App Store va Google Play Storega 100% kafolatli joylash",
-          "Muntazam yangilanishlar va 24/7 texnik qo'llab-quvvatlash"
+          { title: "Cross-Platform & Native", desc: "Flutter, React Native, Swift va Kotlin orqali iOS va Android ilovalar." },
+          { title: "Push Bildirishnomalar", desc: "Mijozlarni qaytarish uchun avtomatik push xabarlar va offline rejim." },
+          { title: "Biometrik Kirish & To'lovlar", desc: "FaceID, TouchID hamda Payme, Click, Apple Pay orqali xavfsiz to'lovlar." },
+          { title: "App Store & Google Play", desc: "Ilovani 100% kafolat bilan xalqaro do'konlarga muvaffaqiyatli joylashtirish." },
+          { title: "24/7 Texnik Qo'llab-quvvatlash", desc: "Muntazam yangilanishlar, xavfsizlik va server monitoringi." }
         ],
         stats: "100K+ Yuklab olishlarga mos arxitektura"
       },
@@ -87,11 +87,11 @@ export const translations = {
         title: "Yuqori Konversiyali Lending Saytlar",
         desc: "Mahsulot yoki xizmatingizni birinchi daqiqalardanoq sotishga mo'ljallangan, zamonaviy va ultra-tezkor sotuvchi saytlar.",
         features: [
-          "Marketing psixologiyasi va sotuvchi struktura (AIDA)",
-          "Google PageSpeed 95+ ball (3 soniyadan tez yuklanish)",
-          "Telegram Bot va CRM ga avtomatik buyurtmalar tushishi",
-          "Barcha ekranlarga 100% mos (Mobil, Planshet, Kompyuter)",
-          "SEO va Google/Yandex reklama uchun to'liq tayyor"
+          { title: "AIDA Sotuvchi Struktura", desc: "Mijoz diqqatini jalb qilish va sotuvga yo'naltirish marketing psixologiyasi." },
+          { title: "Google PageSpeed 99/100", desc: "Ultra-tezkor 1-2 soniyada yuklanish va yuqori konversiya ko'rsatkichi." },
+          { title: "Telegram Bot & CRM Integratsiya", desc: "Har bir yangi lid va buyurtma soniya ichida Telegramingizga kelib tushadi." },
+          { title: "100% Moslashuvchan Dizayn", desc: "Barcha smartfonlar, planshetlar va kompyuterlarda benuqson ko'rinish." },
+          { title: "SEO & Reklama Integratsiyasi", desc: "Google va Yandex qidiruv tizimlariga mos, tayyor metateglar va piksel." }
         ],
         actionText: "3-5 kunda tayyor bo'ladi"
       }
@@ -193,11 +193,11 @@ export const translations = {
         title: "Mobile App Development (iOS & Android)",
         desc: "Intuitive UI/UX, blazingly fast mobile applications published and maintained on App Store and Google Play.",
         features: [
-          "Cross-platform (Flutter / React Native) and Native (Swift/Kotlin)",
-          "Push notifications and offline data sync",
-          "Biometric authentication (FaceID/TouchID) & integrated payments",
-          "100% guaranteed App Store and Google Play publishing",
-          "Continuous updates & 24/7 technical support"
+          { title: "Cross-Platform & Native", desc: "iOS and Android apps with Flutter, React Native, Swift and Kotlin." },
+          { title: "Push Notifications", desc: "Automated push notifications to engage users and seamless offline sync." },
+          { title: "Biometric Auth & Payments", desc: "FaceID, TouchID and integrated Stripe, Apple Pay, Payme payments." },
+          { title: "App Store & Google Play", desc: "100% guaranteed publishing on international app stores." },
+          { title: "24/7 Technical Support", desc: "Continuous updates, security hardening, and server monitoring." }
         ],
         stats: "Built for 100K+ concurrent users"
       },
@@ -205,11 +205,11 @@ export const translations = {
         title: "High-Converting Landing Pages",
         desc: "Ultra-fast, conversion-optimized landing pages designed to turn visitors into paying customers from day one.",
         features: [
-          "Sales-driven AIDA structure & modern aesthetics",
-          "Google PageSpeed 95+ score (loads in under 2 seconds)",
-          "Instant lead capture directly to Telegram Bot & CRM",
-          "100% responsive across mobile, tablet, and desktop",
-          "SEO & Google Ads / Meta Ads optimized"
+          { title: "AIDA Sales Structure", desc: "Conversion psychology designed to maximize customer acquisition." },
+          { title: "Google PageSpeed 99/100", desc: "Loads in under 1-2 seconds with top SEO and performance scores." },
+          { title: "Telegram Bot & CRM", desc: "Direct real-time lead capture to your Telegram and CRM pipeline." },
+          { title: "100% Responsive Design", desc: "Flawless layout across smartphones, tablets, and desktops." },
+          { title: "SEO & Ads Ready", desc: "Pre-configured metatags, OpenGraph, Google & Meta Ads tracking." }
         ],
         actionText: "Delivery in 3-5 days"
       }
@@ -311,11 +311,11 @@ export const translations = {
         title: "Разработка Мобильных Приложений (iOS & Android)",
         desc: "Удобный интерфейс, премиальный UI/UX дизайн, публикация и сопровождение в App Store и Google Play.",
         features: [
-          "Кроссплатформенная (Flutter / React Native) и Native (Swift/Kotlin)",
-          "Push-уведомления и работа в автономном (offline) режиме",
-          "Биометрический вход (FaceID / TouchID) и встроенные платежи",
-          "100% гарантированная публикация в App Store и Google Play",
-          "Регулярные обновления и круглосуточная техподдержка"
+          { title: "Кроссплатформенная & Native", desc: "iOS и Android приложения на Flutter, React Native, Swift и Kotlin." },
+          { title: "Push-уведомления", desc: "Удержание клиентов и стабильная работа в offline режиме." },
+          { title: "Биометрия & Платежи", desc: "FaceID, TouchID и безопасная оплата через Payme, Click, Apple Pay." },
+          { title: "App Store & Google Play", desc: "100% гарантированная публикация в международных магазинах." },
+          { title: "24/7 Техподдержка", desc: "Регулярные обновления, безопасность и мониторинг серверов." }
         ],
         stats: "Архитектура под 100K+ пользователей"
       },
