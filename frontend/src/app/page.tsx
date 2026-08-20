@@ -96,42 +96,6 @@ export default function HomePage() {
               </Button>
             </a>
           </div>
-
-          {/* 3 Highlight Cards in Hero */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 text-left">
-            <a href="#section-websites" className="p-7 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all group backdrop-blur">
-              <div className="w-12 h-12 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                01
-              </div>
-              <h3 className="font-extrabold text-xl text-white mb-2 group-hover:text-blue-400 transition-colors">Web Saytlar</h3>
-              <p className="text-sm text-slate-300 font-medium leading-relaxed">E-Commerce, CRM, ERP va Korporativ Portallar</p>
-              <div className="mt-5 flex items-center gap-1.5 text-sm font-bold text-blue-400">
-                Batafsil ko'rish <ChevronRight className="w-4 h-4" />
-              </div>
-            </a>
-
-            <a href="#section-mobile" className="p-7 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all group backdrop-blur">
-              <div className="w-12 h-12 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                02
-              </div>
-              <h3 className="font-extrabold text-xl text-white mb-2 group-hover:text-blue-400 transition-colors">Mobile App</h3>
-              <p className="text-sm text-slate-300 font-medium leading-relaxed">iOS (iPhone) va Android Mobil Ilovalar</p>
-              <div className="mt-5 flex items-center gap-1.5 text-sm font-bold text-blue-400">
-                Batafsil ko'rish <ChevronRight className="w-4 h-4" />
-              </div>
-            </a>
-
-            <a href="#section-landing" className="p-7 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all group backdrop-blur">
-              <div className="w-12 h-12 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                03
-              </div>
-              <h3 className="font-extrabold text-xl text-white mb-2 group-hover:text-blue-400 transition-colors">Landing Page</h3>
-              <p className="text-sm text-slate-300 font-medium leading-relaxed">Tezkor va Yuqori Sotuvchi Lending Saytlar</p>
-              <div className="mt-5 flex items-center gap-1.5 text-sm font-bold text-blue-400">
-                Batafsil ko'rish <ChevronRight className="w-4 h-4" />
-              </div>
-            </a>
-          </div>
         </div>
       </section>
 
