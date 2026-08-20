@@ -89,14 +89,6 @@ export default function HomePage() {
                 {t.nav.projects}
               </a>
             </li>
-            <li>
-              <a 
-                href="tel:+998919517335" 
-                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
-              >
-                {t.nav.contact}
-              </a>
-            </li>
           </ul>
         </div>
 
