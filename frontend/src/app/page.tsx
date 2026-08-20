@@ -108,15 +108,15 @@ export default function HomePage() {
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative"
       >
         {/* Two-Column Industrial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural & Clean Typography with Structured Features matching Card Height (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
               <h2 
                 id="websites-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+                className="text-3xl sm:text-4xl lg:text-[38px] xl:text-4xl font-black tracking-tight text-white leading-[1.15]"
               >
-                E-Commerce va Zamonaviy Veb-Saytlar
+                {t.threeSections.section1.title}
               </h2>
               <p className="text-slate-300 text-sm sm:text-base leading-[1.65] font-normal">
                 {t.threeSections.section1.desc}
@@ -124,7 +124,7 @@ export default function HomePage() {
             </div>
 
             {/* Feature List to perfectly balance vertical height */}
-            <div className="space-y-3.5 pt-1">
+            <div className="space-y-4 pt-1">
               {t.threeSections.section1.features.map((feat, idx) => (
                 <div 
                   key={idx}
@@ -137,7 +137,7 @@ export default function HomePage() {
                     <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
@@ -146,11 +146,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Precision Graphic Framed Showcase Image with +100px Height (7 cols) */}
+          {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
             <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Graphic Precision & 100px Increased Height */}
-              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              {/* Image Frame with Balanced Height */}
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
@@ -177,12 +177,12 @@ export default function HomePage() {
         aria-labelledby="mobile-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Precision Graphic Framed Mobile Image (7 cols) */}
           <div className="lg:col-span-7 w-full order-2 lg:order-1">
             <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Graphic Precision & Increased Height */}
-              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              {/* Image Frame with Balanced Height */}
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/mobile-showcase.png" 
                   alt="Mobile App Showcase" 
@@ -204,7 +204,7 @@ export default function HomePage() {
             <div className="space-y-3">
               <h2 
                 id="mobile-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+                className="text-3xl sm:text-4xl lg:text-[38px] xl:text-4xl font-black tracking-tight text-white leading-[1.15]"
               >
                 {t.threeSections.section2.title}
               </h2>
@@ -214,7 +214,7 @@ export default function HomePage() {
             </div>
 
             {/* Feature List matching vertical height */}
-            <div className="space-y-3.5 pt-1">
+            <div className="space-y-4 pt-1">
               {t.threeSections.section2.features.map((feat, idx) => (
                 <div 
                   key={idx}
@@ -227,7 +227,7 @@ export default function HomePage() {
                     <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
@@ -246,12 +246,12 @@ export default function HomePage() {
         aria-labelledby="landing-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Precision Graphic Framed Landing Page Image (7 cols) */}
           <div className="lg:col-span-7 w-full order-2 lg:order-1">
             <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Graphic Precision & Increased Height */}
-              <div className="relative h-[440px] sm:h-[500px] lg:h-[530px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+              {/* Image Frame with Balanced Height */}
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/landing-showcase.png" 
                   alt="Landing Page Website Showcase" 
@@ -273,7 +273,7 @@ export default function HomePage() {
             <div className="space-y-3">
               <h2 
                 id="landing-heading"
-                className="text-3xl sm:text-4xl lg:text-[40px] xl:text-5xl font-black tracking-tight text-white leading-[1.15]"
+                className="text-3xl sm:text-4xl lg:text-[38px] xl:text-4xl font-black tracking-tight text-white leading-[1.15]"
               >
                 {t.threeSections.section3.title}
               </h2>
@@ -283,7 +283,7 @@ export default function HomePage() {
             </div>
 
             {/* Feature List matching vertical height */}
-            <div className="space-y-3.5 pt-1">
+            <div className="space-y-4 pt-1">
               {t.threeSections.section3.features.map((feat, idx) => (
                 <div 
                   key={idx}
@@ -296,7 +296,7 @@ export default function HomePage() {
                     <h3 className="text-sm font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal mt-0.5">
                       {feat.desc}
                     </p>
                   </div>
