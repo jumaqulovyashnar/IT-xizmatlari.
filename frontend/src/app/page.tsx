@@ -48,13 +48,55 @@ export default function HomePage() {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-2 text-sm font-bold text-slate-200">
-            <li><a href="#" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.home}</a></li>
-            <li><a href="#section-websites" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.web}</a></li>
-            <li><a href="#section-mobile" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.mobile}</a></li>
-            <li><a href="#section-landing" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.landing}</a></li>
-            <li><a href="#section-projects" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.projects}</a></li>
-            <li><a href="tel:+998919517335" className="hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-colors">{t.nav.contact}</a></li>
+          <ul className="flex items-center gap-7 text-sm font-bold">
+            <li>
+              <a 
+                href="#" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.home}
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#section-websites" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.web}
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#section-mobile" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.mobile}
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#section-landing" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.landing}
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#section-projects" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.projects}
+              </a>
+            </li>
+            <li>
+              <a 
+                href="tel:+998919517335" 
+                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+              >
+                {t.nav.contact}
+              </a>
+            </li>
           </ul>
         </div>
 
