@@ -247,29 +247,8 @@ export default function HomePage() {
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-800/80"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Precision Graphic Framed Landing Page Image (7 cols) */}
-          <div className="lg:col-span-7 w-full order-2 lg:order-1">
-            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
-              {/* Image Frame with Balanced Height */}
-              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img 
-                  src="/landing-showcase.png" 
-                  alt="Landing Page Website Showcase" 
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Technical Bottom Label */}
-              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span>SCALE: 100% // PRODUCTION LANDING</span>
-                <span className="text-blue-400 font-bold">HIGH CONVERTING</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
+          {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
               <h2 
                 id="landing-heading"
@@ -302,6 +281,27 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Right Column: Precision Graphic Framed Landing Page Image (7 cols) */}
+          <div className="lg:col-span-7 w-full">
+            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/70 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-slate-700 group">
+              {/* Image Frame with Balanced Height */}
+              <div className="relative h-[420px] sm:h-[460px] lg:h-[480px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
+                <img 
+                  src="/landing-showcase.png" 
+                  alt="Landing Page Website Showcase" 
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Technical Bottom Label */}
+              <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>SCALE: 100% // PRODUCTION LANDING</span>
+                <span className="text-blue-400 font-bold">HIGH CONVERTING</span>
+              </div>
             </div>
           </div>
         </div>
