@@ -3,71 +3,82 @@ export type Language = 'uz' | 'en' | 'ru';
 export const translations = {
   uz: {
     brandName: "IT Xizmatlari Pro",
+    slogan: "SIFAT • ISHONCH • NATIJA",
+    subSlogan: "BIRGA YUKSALAMIZ!",
+    phone: "+998 91 951 73 35",
+    contactUs: "BIZ BILAN BOG'LANING",
+    alwaysWithYou: "BIZ HAR DOIM SIZ BILAN",
     nav: {
       services: "Xizmatlar",
-      architecture: "Arxitektura",
-      sla: "SLA Kafolati",
+      web: "Web Saytlar",
+      mobile: "Mobile App",
+      landing: "Landing Page",
       portal: "Mijoz Portali",
       admin: "Boshqaruv Paneli",
-      openTicket: "Ticket Ochish",
+      orderNow: "Buyurtma Berish",
     },
     hero: {
-      badge: "99.9% Uptime & 24/7 SLA Kafolati",
-      titleStart: "Biznesingiz uchun Professional",
-      titleGradient: "IT Infratuzilma va Dasturiy Xizmatlar",
-      subtitle: "Serverlar, kiberxavfsizlik, dasturiy ta'minot va tezkor IT helpdesk xizmatlarini yagona boshqaruv platformasi orqali buyurtma qiling va nazorat qiling.",
-      orderBtn: "Xizmatga Buyurtma Berish",
-      catalogBtn: "Katalog bilan Tanishish",
+      badge: "Professional Dasturlash va IT Yechimlar",
+      titleStart: "Biznesingiz uchun Zamonaviy",
+      titleGradient: "Veb-Saytlar, Mobil Ilovalar va IT Xizmatlar",
+      subtitle: "Biznesingizni raqamlashtirish, mijozlar oqimini oshirish va savdoni avtomatlashtirish uchun yuqori sifatli dasturiy yechimlar yaratamiz.",
+      orderBtn: "Loyiha Bo'yicha Maslahat",
+      viewServices: "Xizmatlarimiz",
     },
-    services: {
-      title: "IT Xizmatlar Katalogi",
-      subtitle: "Kompaniyangiz ehtiyojlariga moslashgan kompleks IT xizmatlari paketi.",
-      startPrice: "Boshlang'ich narx",
-      select: "Tanlash",
-      items: [
-        {
-          code: "DEV",
-          title: "Maxsus Dasturiy Ta'minot",
-          desc: "Web ilovalar, mobil dasturlar, CRM va ERP korporativ tizimlarni noldan yaratish va kengaytirish.",
-          price: "15,000,000 UZS dan",
-          tag: "Fullstack Dev",
-        },
-        {
-          code: "CLOUD",
-          title: "Cloud & DevOps Infratuzilma",
-          desc: "AWS, GCP, VPS serverlar boshqaruvi, CI/CD quvurlari, Docker va Kubernetes klasterlar.",
-          price: "5,000,000 UZS / oy",
-          tag: "24/7 Monitoring",
-        },
-        {
-          code: "CYBER",
-          title: "Kiberxavfsizlik va Audit",
-          desc: "Zaifliklarni skanerlash (Pentest), ISO 27001 muvofiqlik, xavfsizlik devorlari va DLP tizimlari.",
-          price: "8,000,000 UZS dan",
-          tag: "Cyber Audit",
-        },
-        {
-          code: "HELPDESK",
-          title: "24/7 IT Helpdesk & Servis",
-          desc: "Ofis kompyuterlari, dasturlar, printer va serverlarni doimiy texnik nazorat qilish va ta'mirlash.",
-          price: "3,500,000 UZS / oy",
-          tag: "15 daq SLA",
-        },
-        {
-          code: "NETWORK",
-          title: "Tarmoq va VPN Tizimlari",
-          desc: "MikroTik/Cisco routerlar, xavfsiz ofislararo Site-to-Site VPN va korporativ Wi-Fi zonalari.",
-          price: "4,000,000 UZS dan",
-          tag: "Networking",
-        },
-        {
-          code: "DATABASE",
-          title: "Server & Ma'lumotlar Bazasi",
-          desc: "PostgreSQL, MySQL, Redis klasterlari, replikatsiya, avtomatik zahira (Backup) tizimlari.",
-          price: "4,500,000 UZS / oy",
-          tag: "DBA & Cloud",
-        },
-      ],
+    threeSections: {
+      section1: {
+        badge: "01 / WEB PLATFORMS",
+        title: "Zamonaviy Web Saytlar va Katta Tizimlar",
+        desc: "Har qanday murakkablikdagi kengaytiriladigan korporativ veb-platformalar, xavfsiz va tezkor arxitektura.",
+        items: [
+          {
+            name: "E-Commerce (Internet Do'konlar)",
+            desc: "Payme, Click, Uzum to'lovlari, qulay savat, ombor va tovarlar hisobi, tezkor qidiruv.",
+            tag: "Savdo va Do'kon"
+          },
+          {
+            name: "CRM va ERP Tizimlar",
+            desc: "Mijozlar bazasi, savdo voronkasi, xodimlar vazifalari va moliyaviy hisobotlarni avtomatlashtirish.",
+            tag: "Boshqaruv & Avtomatlashtirish"
+          },
+          {
+            name: "Korporativ Veb-Portallar",
+            desc: "Kompaniya imidjini oshiruvchi, ko'p tilli, interaktiv mijozlar shaxsiy kabineti bilan.",
+            tag: "Korporativ Imidj"
+          },
+          {
+            name: "Maxsus Integratsiyalar va API",
+            desc: "1C buxgalteriya, Telegram botlar, SMS xabarnomalar va to'lov tizimlari bilan to'liq bog'lash.",
+            tag: "Integratsiyalar"
+          }
+        ]
+      },
+      section2: {
+        badge: "02 / MOBILE APPS",
+        title: "Mobil Ilovalar (iOS & Android)",
+        desc: "Foydalanuvchilar uchun qulay, chiroyli UI/UX dizaynga ega hamda App Store va Google Play uchun optimallashtirilgan mobil dasturlar.",
+        features: [
+          "Cross-platform (Flutter / React Native) va Native (Swift/Kotlin)",
+          "Push xabarnomalar va offline rejimda ishlash",
+          "Biometrik kirish (FaceID / TouchID) va to'lov tizimlari",
+          "App Store va Google Play Storega 100% kafolatli joylash",
+          "Muntazam yangilanishlar va 24/7 texnik qo'llab-quvvatlash"
+        ],
+        stats: "100K+ Yuklab olishlarga mos arxitektura"
+      },
+      section3: {
+        badge: "03 / LANDING PAGES",
+        title: "Yuqori Konversiyali Landing Page (Lending Saytlar)",
+        desc: "Mahsulot yoki xizmatingizni birinchi daqiqalardanoq sotishga mo'ljallangan, zamonaviy va ultra-tezkor sotuvchi saytlar.",
+        features: [
+          "Marketing psixologiyasi va sotuvchi struktura (AIDA)",
+          "Google PageSpeed 95+ ball (3 soniyadan tez yuklanish)",
+          "Telegram Bot va CRM ga avtomatik buyurtmalar tushishi",
+          "Barcha ekranlarga 100% mos (Mobil, Planshet, Kompyuter)",
+          "SEO va Google/Yandex reklama uchun to'liq tayyor"
+        ],
+        actionText: "3-5 kunda tayyor bo'ladi"
+      }
     },
     portal: {
       title: "Mening IT So'rovlarim (Tickets)",
@@ -94,71 +105,82 @@ export const translations = {
 
   en: {
     brandName: "IT Services Pro",
+    slogan: "QUALITY • TRUST • RESULT",
+    subSlogan: "LET'S GROW TOGETHER!",
+    phone: "+998 91 951 73 35",
+    contactUs: "CONTACT US",
+    alwaysWithYou: "ALWAYS WITH YOU",
     nav: {
       services: "Services",
-      architecture: "Architecture",
-      sla: "SLA Guarantee",
+      web: "Websites",
+      mobile: "Mobile Apps",
+      landing: "Landing Pages",
       portal: "Client Portal",
       admin: "Admin Dashboard",
-      openTicket: "Open Ticket",
+      orderNow: "Order Now",
     },
     hero: {
-      badge: "99.9% Uptime & 24/7 SLA Guarantee",
-      titleStart: "Enterprise-Grade",
-      titleGradient: "IT Infrastructure & Software Services",
-      subtitle: "Order and manage servers, cybersecurity, custom software development, and rapid 24/7 IT helpdesk under a unified modern platform.",
-      orderBtn: "Request IT Service",
-      catalogBtn: "Explore Catalog",
+      badge: "Professional Software Engineering & IT Solutions",
+      titleStart: "Modern High-Performance",
+      titleGradient: "Websites, Mobile Apps & IT Systems",
+      subtitle: "We build cutting-edge digital solutions to automate workflows, accelerate sales, and scale your business globally.",
+      orderBtn: "Get Free Consultation",
+      viewServices: "Our Solutions",
     },
-    services: {
-      title: "IT Service Catalog",
-      subtitle: "Comprehensive IT solutions tailored to your business scale.",
-      startPrice: "Starting from",
-      select: "Select",
-      items: [
-        {
-          code: "DEV",
-          title: "Custom Software Engineering",
-          desc: "Fullstack web applications, mobile apps, CRM & ERP platforms built and scaled from scratch.",
-          price: "from $1,200",
-          tag: "Fullstack Dev",
-        },
-        {
-          code: "CLOUD",
-          title: "Cloud & DevOps Infrastructure",
-          desc: "AWS, GCP, VPS server provisioning, automated CI/CD pipelines, Docker & Kubernetes clusters.",
-          price: "$400 / mo",
-          tag: "24/7 Monitoring",
-        },
-        {
-          code: "CYBER",
-          title: "Cybersecurity & Vulnerability Audit",
-          desc: "Penetration testing, ISO 27001 compliance, Web Application Firewalls (WAF), and DLP solutions.",
-          price: "from $650",
-          tag: "Cyber Audit",
-        },
-        {
-          code: "HELPDESK",
-          title: "24/7 IT Helpdesk & Support",
-          desc: "End-user support, office network maintenance, workstation troubleshooting and hardware servicing.",
-          price: "$300 / mo",
-          tag: "15 min SLA",
-        },
-        {
-          code: "NETWORK",
-          title: "Enterprise Networking & VPN",
-          desc: "MikroTik/Cisco routing, branch Site-to-Site VPN mesh, and secure Wi-Fi deployment.",
-          price: "from $350",
-          tag: "Networking",
-        },
-        {
-          code: "DATABASE",
-          title: "Database Administration & High Availability",
-          desc: "PostgreSQL, MySQL, Redis clustering, zero-downtime replication and automated backup plans.",
-          price: "$380 / mo",
-          tag: "DBA & Cloud",
-        },
-      ],
+    threeSections: {
+      section1: {
+        badge: "01 / WEB PLATFORMS",
+        title: "Modern Websites & Enterprise Web Systems",
+        desc: "Scalable corporate web platforms, secure payment architectures, and responsive digital products.",
+        items: [
+          {
+            name: "E-Commerce Platforms",
+            desc: "Payme, Click, Stripe checkout, cart, warehouse and inventory synchronization, lightning search.",
+            tag: "E-Commerce & Retail"
+          },
+          {
+            name: "CRM & ERP Systems",
+            desc: "Customer base, automated sales pipelines, task management, and executive financial dashboards.",
+            tag: "Enterprise ERP & CRM"
+          },
+          {
+            name: "Corporate Web Portals",
+            desc: "Multilingual, interactive customer accounts, and strong brand presence.",
+            tag: "Corporate Portal"
+          },
+          {
+            name: "Custom Integrations & APIs",
+            desc: "1C ERP, Telegram bots, SMS gateways, and secure banking webhook connectors.",
+            tag: "API Integrations"
+          }
+        ]
+      },
+      section2: {
+        badge: "02 / MOBILE APPS",
+        title: "Mobile App Development (iOS & Android)",
+        desc: "Intuitive UI/UX, blazingly fast mobile applications published and maintained on App Store and Google Play.",
+        features: [
+          "Cross-platform (Flutter / React Native) and Native (Swift/Kotlin)",
+          "Push notifications and offline data sync",
+          "Biometric authentication (FaceID/TouchID) & integrated payments",
+          "100% guaranteed App Store and Google Play publishing",
+          "Continuous updates & 24/7 technical support"
+        ],
+        stats: "Built for 100K+ concurrent users"
+      },
+      section3: {
+        badge: "03 / LANDING PAGES",
+        title: "High-Converting Landing Pages",
+        desc: "Ultra-fast, conversion-optimized landing pages designed to turn visitors into paying customers from day one.",
+        features: [
+          "Sales-driven AIDA structure & modern aesthetics",
+          "Google PageSpeed 95+ score (loads in under 2 seconds)",
+          "Instant lead capture directly to Telegram Bot & CRM",
+          "100% responsive across mobile, tablet, and desktop",
+          "SEO & Google Ads / Meta Ads optimized"
+        ],
+        actionText: "Delivery in 3-5 days"
+      }
     },
     portal: {
       title: "My IT Support Tickets",
@@ -185,71 +207,82 @@ export const translations = {
 
   ru: {
     brandName: "IT Услуги Про",
+    slogan: "КАЧЕСТВО • ДОВЕРИЕ • РЕЗУЛЬТАТ",
+    subSlogan: "РАСТЕМ ВМЕСТЕ!",
+    phone: "+998 91 951 73 35",
+    contactUs: "СВЯЖИТЕСЬ С НАМИ",
+    alwaysWithYou: "МЫ ВСЕГДА С ВАМИ",
     nav: {
       services: "Услуги",
-      architecture: "Архитектура",
-      sla: "Гарантия SLA",
+      web: "Веб-сайты",
+      mobile: "Мобильные Приложения",
+      landing: "Landing Page",
       portal: "Портал Клиента",
       admin: "Панель Управления",
-      openTicket: "Создать Тикет",
+      orderNow: "Заказать",
     },
     hero: {
-      badge: "99.9% Uptime и Гарантия SLA 24/7",
-      titleStart: "Профессиональная",
-      titleGradient: "IT Инфраструктура и Разработка ПО",
-      subtitle: "Заказывайте и управляйте серверами, кибербезопасностью, разработкой ПО и оперативной техподдержкой на единой платформе.",
-      orderBtn: "Заказать IT Услугу",
-      catalogBtn: "Каталог Услуг",
+      badge: "Профессиональная Разработка и IT Решения",
+      titleStart: "Современные и Надежные",
+      titleGradient: "Веб-Сайты, Мобильные Приложения и IT Системы",
+      subtitle: "Разрабатываем высокотехнологичные цифровые продукты для автоматизации бизнеса, увеличения продаж и привлечения клиентов.",
+      orderBtn: "Получить Консультацию",
+      viewServices: "Наши Услуги",
     },
-    services: {
-      title: "Каталог IT Услуг",
-      subtitle: "Комплексные IT решения, адаптированные под масштабы вашего бизнеса.",
-      startPrice: "Начальная цена",
-      select: "Выбрать",
-      items: [
-        {
-          code: "DEV",
-          title: "Разработка Программного Обеспечения",
-          desc: "Веб-приложения, мобильные сервисы, корпоративные CRM и ERP системы с нуля.",
-          price: "от 15,000,000 UZS",
-          tag: "Fullstack Dev",
-        },
-        {
-          code: "CLOUD",
-          title: "Облачная Инфраструктура и DevOps",
-          desc: "Управление серверами AWS, GCP, VPS, CI/CD конвейеры, кластеры Docker и Kubernetes.",
-          price: "5,000,000 UZS / мес",
-          tag: "24/7 Мониторинг",
-        },
-        {
-          code: "CYBER",
-          title: "Кибербезопасность и Аудит",
-          desc: "Поиск уязвимостей (Pentest), соответствие ISO 27001, межсетевые экраны и DLP.",
-          price: "от 8,000,000 UZS",
-          tag: "Cyber Audit",
-        },
-        {
-          code: "HELPDESK",
-          title: "24/7 IT Helpdesk и Техподдержка",
-          desc: "Обслуживание рабочих станций сотрудников, оргтехники, софта и серверов.",
-          price: "3,500,000 UZS / мес",
-          tag: "15 мин SLA",
-        },
-        {
-          code: "NETWORK",
-          title: "Корпоративные Сети и VPN",
-          desc: "Настройка MikroTik/Cisco, межфилиальный VPN Site-to-Site и безопасный Wi-Fi.",
-          price: "от 4,000,000 UZS",
-          tag: "Networking",
-        },
-        {
-          code: "DATABASE",
-          title: "Серверы и Базы Данных",
-          desc: "Кластеры PostgreSQL, MySQL, Redis, репликация и автоматический бэкап.",
-          price: "4,500,000 UZS / мес",
-          tag: "DBA & Cloud",
-        },
-      ],
+    threeSections: {
+      section1: {
+        badge: "01 / WEB СИСТЕМЫ",
+        title: "Современные Веб-Сайты и Масштабные Системы",
+        desc: "Корпоративные платформы любой сложности, высокая безопасность, быстрая и отказоустойчивая архитектура.",
+        items: [
+          {
+            name: "E-Commerce (Интернет-Магазины)",
+            desc: "Интеграция Payme, Click, корзина, учет склада и товаров, умный поиск.",
+            tag: "Онлайн Торговля"
+          },
+          {
+            name: "CRM и ERP Системы",
+            desc: "База клиентов, воронка продаж, управление задачами сотрудников и финансовые отчеты.",
+            tag: "Автоматизация Бизнеса"
+          },
+          {
+            name: "Корпоративные Веб-Порталы",
+            desc: "Многоязычные порталы с личным кабинетом клиентов и безупречным имиджем компании.",
+            tag: "Корпоративный Имидж"
+          },
+          {
+            name: "Интеграции и API",
+            desc: "Связка с 1С, Telegram-ботами, SMS-шлюзами и банковскими системами.",
+            tag: "Интеграции"
+          }
+        ]
+      },
+      section2: {
+        badge: "02 / МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ",
+        title: "Разработка Мобильных Приложений (iOS & Android)",
+        desc: "Удобный интерфейс, премиальный UI/UX дизайн, публикация и сопровождение в App Store и Google Play.",
+        features: [
+          "Кроссплатформенная (Flutter / React Native) и Native (Swift/Kotlin)",
+          "Push-уведомления и работа в автономном (offline) режиме",
+          "Биометрический вход (FaceID / TouchID) и встроенные платежи",
+          "100% гарантированная публикация в App Store и Google Play",
+          "Регулярные обновления и круглосуточная техподдержка"
+        ],
+        stats: "Архитектура под 100K+ пользователей"
+      },
+      section3: {
+        badge: "03 / LANDING PAGE",
+        title: "Высококонверсионные Landing Page (Лендинги)",
+        desc: "Продающие одностраничные сайты нового поколения, созданные для максимального привлечения клиентов и заявок.",
+        features: [
+          "Маркетинговая структура AIDA и современный визуал",
+          "Google PageSpeed 95+ (загрузка менее чем за 2 секунды)",
+          "Мгновенный сбор заявок прямо в Telegram-бот и CRM",
+          "100% адаптивность под смартфоны, планшеты и ПК",
+          "Полная готовность к SEO и рекламе в Google/Яндекс"
+        ],
+        actionText: "Срок разработки: 3-5 дней"
+      }
     },
     portal: {
       title: "Мои Заявки в IT Поддержку (Тикеты)",
