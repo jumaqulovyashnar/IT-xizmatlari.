@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white">
       {/* Navbar */}
-      <header className="navbar bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-4 sm:px-8">
+      <header className="navbar bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-6 sm:px-10 lg:px-16 min-h-[80px] py-3">
         <div className="navbar-start">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
@@ -48,11 +48,11 @@ export default function HomePage() {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex items-center gap-7 text-sm font-bold">
+          <ul className="flex items-center gap-10 text-[15px] font-bold">
             <li>
               <a 
                 href="#" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.home}
               </a>
@@ -60,7 +60,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-websites" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.web}
               </a>
@@ -68,7 +68,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-mobile" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.mobile}
               </a>
@@ -76,7 +76,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-landing" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.landing}
               </a>
@@ -84,7 +84,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="#section-projects" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.projects}
               </a>
@@ -92,7 +92,7 @@ export default function HomePage() {
             <li>
               <a 
                 href="tel:+998919517335" 
-                className="relative py-2 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
+                className="relative py-2.5 text-slate-300 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300"
               >
                 {t.nav.contact}
               </a>
@@ -100,10 +100,14 @@ export default function HomePage() {
           </ul>
         </div>
 
-        <div className="navbar-end gap-3">
+        <div className="navbar-end gap-4">
           <ThemeLanguageSwitcher />
-          <a href="tel:+998919517335">
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-lg shadow-blue-500/30 gap-2 border-0 h-9 px-4">
+          <a 
+            href="https://t.me/yashnar" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold shadow-lg shadow-blue-500/30 gap-2 border-0 h-10 px-5 text-sm hover:scale-105 transition-all">
               <Zap className="w-4 h-4" /> {t.nav.orderNow}
             </Button>
           </a>
