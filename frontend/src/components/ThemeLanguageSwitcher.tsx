@@ -26,15 +26,15 @@ export function ThemeLanguageSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center gap-2">
-      {/* 1. Language Dropdown */}
+    <div className="flex items-center gap-2.5">
+      {/* 1. Language Dropdown - Yumaloq (rounded-full) */}
       <div className="dropdown dropdown-end">
         <label 
           tabIndex={0} 
-          className="btn btn-sm btn-ghost gap-1.5 px-3 py-1 bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl cursor-pointer text-xs font-bold transition-all shadow-sm"
+          className="btn btn-sm btn-ghost gap-2 px-3.5 h-10 min-h-[40px] bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-full cursor-pointer text-xs font-bold transition-all shadow-sm flex items-center"
         >
-          <Globe className="w-3.5 h-3.5 text-blue-400" />
-          <span className="uppercase tracking-wider">{language}</span>
+          <Globe className="w-4 h-4 text-blue-400" />
+          <span className="uppercase tracking-wider font-extrabold">{language}</span>
         </label>
         <ul 
           tabIndex={0} 
@@ -43,7 +43,7 @@ export function ThemeLanguageSwitcher() {
           <li>
             <button 
               onClick={() => setLanguage("uz")} 
-              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "uz" ? "bg-blue-600 text-white font-bold" : ""}`}
+              className={`text-xs font-semibold py-2 px-3 rounded-xl hover:bg-blue-600 hover:text-white ${language === "uz" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
               🇺🇿 O'zbekcha
             </button>
@@ -51,7 +51,7 @@ export function ThemeLanguageSwitcher() {
           <li>
             <button 
               onClick={() => setLanguage("en")} 
-              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "en" ? "bg-blue-600 text-white font-bold" : ""}`}
+              className={`text-xs font-semibold py-2 px-3 rounded-xl hover:bg-blue-600 hover:text-white ${language === "en" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
               🇬🇧 English
             </button>
@@ -59,7 +59,7 @@ export function ThemeLanguageSwitcher() {
           <li>
             <button 
               onClick={() => setLanguage("ru")} 
-              className={`text-xs font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 hover:text-white ${language === "ru" ? "bg-blue-600 text-white font-bold" : ""}`}
+              className={`text-xs font-semibold py-2 px-3 rounded-xl hover:bg-blue-600 hover:text-white ${language === "ru" ? "bg-blue-600 text-white font-bold" : ""}`}
             >
               🇷🇺 Русский
             </button>
@@ -67,11 +67,11 @@ export function ThemeLanguageSwitcher() {
         </ul>
       </div>
 
-      {/* 2. Simple Sun/Moon Dark-Light Switch Toggle */}
+      {/* 2. Simple Sun/Moon Dark-Light Switch Toggle - Yumaloq (rounded-full) */}
       <button
         onClick={toggleDarkLight}
         title="Mavzuni almashtirish (Dark / Light)"
-        className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-blue-400 hover:text-white transition-all shadow-sm group"
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-blue-400 hover:text-white transition-all shadow-sm group hover:scale-105"
       >
         {theme === "light" ? (
           <Sun className="w-4 h-4 text-amber-400 group-hover:rotate-45 transition-transform" />
