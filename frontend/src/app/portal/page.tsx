@@ -2,18 +2,24 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { ThemeLanguageSwitcher } from "@/components/ThemeLanguageSwitcher";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { 
   PlusCircle, 
   Clock, 
   CheckCircle2, 
   AlertCircle, 
-  Search, 
   Send,
-  MessageSquare,
-  FileText
+  ArrowLeft
 } from "lucide-react";
 
 export default function PortalPage() {
+  const { t } = useLanguage();
+
   const [tickets, setTickets] = useState([
     {
       id: "IT-2026-001",
@@ -39,7 +45,7 @@ export default function PortalPage() {
       category: "Xavfsizlik & Ruxsatlar",
       priority: "LOW",
       status: "OPEN",
-      assignedTo: "Kutilyapti",
+      assignedTo: "Navbatda",
       updatedAt: "2 soat oldin",
     },
   ]);
@@ -55,11 +61,11 @@ export default function PortalPage() {
     const newTkt = {
       id: `IT-2026-${String(tickets.length + 1).padStart(3, "0")}`,
       title: newTitle,
-      category: "Umumiy IT So'rov",
+      category: "General IT Request",
       priority: newPriority,
       status: "OPEN",
-      assignedTo: "Navbatda",
-      updatedAt: "Hozirgina",
+      assignedTo: "Queue",
+      updatedAt: "Just now",
     };
 
     setTickets([newTkt, ...tickets]);
@@ -70,151 +76,149 @@ export default function PortalPage() {
   const getPriorityBadge = (priority: string) => {
     switch (priority) {
       case "CRITICAL":
-        return <span className="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30">CRITICAL (15m SLA)</span>;
+        return <Badge variant="destructive" className="animate-pulse">CRITICAL (15m SLA)</Badge>;
       case "HIGH":
-        return <span className="px-2 py-0.5 rounded text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">HIGH</span>;
+        return <span className="badge badge-warning text-xs font-bold">HIGH</span>;
       case "MEDIUM":
-        return <span className="px-2 py-0.5 rounded text-xs font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">MEDIUM</span>;
+        return <span className="badge badge-info text-xs font-bold">MEDIUM</span>;
       default:
-        return <span className="px-2 py-0.5 rounded text-xs font-bold bg-slate-500/20 text-slate-400 border border-slate-500/30">LOW</span>;
+        return <span className="badge badge-ghost text-xs font-bold">LOW</span>;
     }
   };
 
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "IN_PROGRESS":
-        return <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> Jarayonda</span>;
+        return <span className="badge badge-primary gap-1 font-semibold"><Clock className="w-3.5 h-3.5" /> {t.portal.inProgress}</span>;
       case "RESOLVED":
-        return <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5" /> Yechildi</span>;
+        return <span className="badge badge-success gap-1 font-semibold text-white"><CheckCircle2 className="w-3.5 h-3.5" /> {t.portal.resolved}</span>;
       default:
-        return <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 flex items-center gap-1.5"><AlertCircle className="w-3.5 h-3.5" /> Ochiq</span>;
+        return <span className="badge badge-neutral gap-1 font-semibold"><AlertCircle className="w-3.5 h-3.5" /> {t.portal.open}</span>;
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-base-100 text-base-content flex flex-col transition-colors duration-300">
       {/* Header */}
-      <header className="border-b border-slate-800 bg-slate-900/80 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <Link href="/" className="font-bold text-xl text-blue-400">
-            ← IT Xizmatlari
+      <header className="navbar bg-base-200 border-b border-base-300 px-4 sm:px-8">
+        <div className="navbar-start gap-4">
+          <Link href="/">
+            <Button variant="ghost" size="sm" className="gap-2">
+              <ArrowLeft className="w-4 h-4" /> {t.brandName}
+            </Button>
           </Link>
-          <span className="text-slate-600">/</span>
-          <span className="font-semibold text-slate-200">Mijoz Portali & ITSM Helpdesk</span>
+          <span className="font-bold text-sm hidden md:inline opacity-70">
+            / {t.nav.portal}
+          </span>
         </div>
-        <div className="flex items-center space-x-3 text-sm">
-          <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold">
-            FC
-          </div>
-          <div>
-            <div className="font-medium text-slate-200">Fintech Corp LLC</div>
-            <div className="text-xs text-slate-500">Premium Obuna</div>
+
+        <div className="navbar-end gap-3">
+          <ThemeLanguageSwitcher />
+          <div className="avatar placeholder">
+            <div className="bg-primary text-primary-content rounded-full w-9">
+              <span className="text-xs font-bold">FC</span>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left 2 Cols: Tickets List */}
+        {/* Left Column: Tickets */}
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-white">Mening IT So'rovlarim (Tickets)</h1>
-            <span className="text-sm text-slate-400">{tickets.length} ta faol so'rov</span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{t.portal.title}</h1>
+            <span className="badge badge-outline font-semibold">{tickets.length} {t.portal.activeTickets}</span>
           </div>
 
           <div className="space-y-4">
             {tickets.map((tkt) => (
-              <div 
-                key={tkt.id}
-                className="p-5 bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition-all space-y-3"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <span className="font-mono text-xs font-semibold text-blue-400 bg-blue-950/60 px-2 py-0.5 rounded border border-blue-800">
-                      {tkt.id}
-                    </span>
-                    <span className="text-xs text-slate-400">{tkt.category}</span>
+              <Card key={tkt.id} className="hover:border-primary/50 transition-all shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="badge badge-primary font-mono text-xs font-bold">{tkt.id}</span>
+                      <span className="text-xs opacity-70">{tkt.category}</span>
+                    </div>
+                    {getStatusBadge(tkt.status)}
                   </div>
-                  {getStatusBadge(tkt.status)}
-                </div>
+                  <CardTitle className="text-lg font-bold pt-1">{tkt.title}</CardTitle>
+                </CardHeader>
 
-                <h3 className="text-base font-bold text-white">{tkt.title}</h3>
-
-                <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-xs text-slate-400">
-                  <div className="flex items-center space-x-3">
+                <CardContent className="pt-0 flex items-center justify-between text-xs opacity-80 border-t border-base-300 pt-3">
+                  <div className="flex items-center gap-3">
                     {getPriorityBadge(tkt.priority)}
-                    <span>Mas'ul: <strong className="text-slate-300">{tkt.assignedTo}</strong></span>
+                    <span>Engineer: <strong>{tkt.assignedTo}</strong></span>
                   </div>
                   <span>{tkt.updatedAt}</span>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
 
-        {/* Right Col: New Ticket Form */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 h-fit sticky top-6">
-          <div className="flex items-center space-x-2 mb-4 text-white font-bold text-lg">
-            <PlusCircle className="w-5 h-5 text-blue-400" />
-            <h2>Yangi IT So'rov Yaratish</h2>
-          </div>
-          <p className="text-xs text-slate-400 mb-6">
-            Nosozlik yoki talabni yozing. Bizning IT muhandislarimiz SLA bo'yicha darhol bog'lanadi.
-          </p>
+        {/* Right Column: New Ticket Form */}
+        <Card className="h-fit sticky top-6 shadow-xl border-primary/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl font-bold">
+              <PlusCircle className="w-5 h-5 text-primary" />
+              {t.portal.createTitle}
+            </CardTitle>
+            <CardDescription>
+              {t.portal.createSubtitle}
+            </CardDescription>
+          </CardHeader>
 
-          <form onSubmit={handleCreateTicket} className="space-y-4">
-            <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-1">
-                Muammo yoki Xizmat Mavzusi
-              </label>
-              <input 
-                type="text"
-                value={newTitle}
-                onChange={(e) => setNewTitle(e.target.value)}
-                placeholder="Masalan: Mail server ishlamayapti"
-                className="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-blue-500"
-                required
-              />
-            </div>
+          <CardContent>
+            <form onSubmit={handleCreateTicket} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">
+                  {t.portal.subjectLabel}
+                </label>
+                <Input 
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
+                  placeholder="e.g. Nginx proxy timeout 504"
+                  required
+                />
+              </div>
 
-            <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-1">
-                Ustuvorlik (Priority)
-              </label>
-              <select 
-                value={newPriority}
-                onChange={(e) => setNewPriority(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-blue-500"
-              >
-                <option value="LOW">LOW (Reaksiya 4 soat)</option>
-                <option value="MEDIUM">MEDIUM (Reaksiya 2 soat)</option>
-                <option value="HIGH">HIGH (Reaksiya 30 daqiqa)</option>
-                <option value="CRITICAL">CRITICAL (Reaksiya 15 daqiqa)</option>
-              </select>
-            </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">
+                  {t.portal.priorityLabel}
+                </label>
+                <select 
+                  value={newPriority}
+                  onChange={(e) => setNewPriority(e.target.value)}
+                  className="select select-bordered select-sm w-full bg-base-100 font-medium"
+                >
+                  <option value="LOW">LOW (SLA 4 hours)</option>
+                  <option value="MEDIUM">MEDIUM (SLA 2 hours)</option>
+                  <option value="HIGH">HIGH (SLA 30 mins)</option>
+                  <option value="CRITICAL">CRITICAL (SLA 15 mins)</option>
+                </select>
+              </div>
 
-            <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-1">
-                Batafsil Tavsif
-              </label>
-              <textarea 
-                value={newDesc}
-                onChange={(e) => setNewDesc(e.target.value)}
-                rows={4}
-                placeholder="Nosozlik tafsilotlari, xato kodi yoki skrinshot izohi..."
-                className="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-blue-500 resize-none"
-              />
-            </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">
+                  {t.portal.descLabel}
+                </label>
+                <textarea 
+                  value={newDesc}
+                  onChange={(e) => setNewDesc(e.target.value)}
+                  rows={4}
+                  className="textarea textarea-bordered w-full bg-base-100 text-sm focus:outline-none focus:border-primary resize-none"
+                  placeholder="Logs, screenshots, stack trace..."
+                />
+              </div>
 
-            <button 
-              type="submit"
-              className="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-lg flex items-center justify-center space-x-2 transition-all shadow-md shadow-blue-600/20"
-            >
-              <Send className="w-4 h-4" />
-              <span>So'rovni Yuborish</span>
-            </button>
-          </form>
-        </div>
+              <Button type="submit" className="w-full gap-2 shadow-md">
+                <Send className="w-4 h-4" />
+                {t.portal.submitBtn}
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
