@@ -219,7 +219,18 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section id="section-mobile" className="py-28 px-4 bg-slate-900/60 border-t border-b border-slate-800">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Mobile Application Information */}
+          {/* Left Column: User's Exact Mobile App Showcase Image */}
+          <div className="lg:col-span-7 w-full">
+            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
+              <img 
+                src="/mobile-showcase.png" 
+                alt="Mobile App Showcase" 
+                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
+              />
+            </div>
+          </div>
+
+          {/* Right Column: Mobile Application Information */}
           <div className="lg:col-span-5 space-y-7">
             <div className="space-y-3">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
@@ -248,17 +259,6 @@ export default function HomePage() {
               <div className="px-4 py-2.5 rounded-xl bg-blue-600/15 text-blue-300 border border-blue-600/30 text-xs font-black">
                 ⭐ App Store & Google Play
               </div>
-            </div>
-          </div>
-
-          {/* Right Column: User's Exact Mobile App Showcase Image */}
-          <div className="lg:col-span-7 w-full">
-            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
-              <img 
-                src="/mobile-showcase.png" 
-                alt="Mobile App Showcase" 
-                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
-              />
             </div>
           </div>
         </div>
