@@ -300,70 +300,47 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 3-CHI BO'LIM: YUQORI KONVERSIYALI LANDING PAGE (SOTUVCHI SAYTLAR)        */}
       {/* ========================================================================= */}
-      <section id="section-landing" className="py-24 px-4 max-w-7xl mx-auto w-full">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Details & Features */}
-          <div className="lg:w-6/12 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              {t.threeSections.section3.title}
-            </h2>
-            <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-              {t.threeSections.section3.desc}
-            </p>
+      <section id="section-landing" className="py-28 px-4 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Landing Page Image Showcase */}
+          <div className="lg:col-span-7 w-full">
+            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
+              <img 
+                src="/landing-showcase.png" 
+                alt="Landing Page Website Showcase" 
+                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
+              />
+            </div>
+          </div>
 
-            <div className="space-y-3.5 pt-2">
+          {/* Right Column: Detailed Landing Page Information */}
+          <div className="lg:col-span-5 space-y-7">
+            <div className="space-y-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+                {t.threeSections.section3.title}
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                {t.threeSections.section3.desc}
+              </p>
+            </div>
+
+            <div className="space-y-4 pt-1">
               {t.threeSections.section3.features.map((feat, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
-                  <div className="p-1 rounded-full bg-blue-600 text-white mt-1 font-bold">
-                    <Check className="w-3.5 h-3.5" />
+                  <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                    <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <span className="text-base font-semibold text-slate-100">{feat}</span>
+                  <span className="text-base font-semibold text-slate-200">{feat}</span>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <div className="px-4 py-2.5 rounded-xl bg-blue-500/15 text-blue-300 border border-blue-500/30 text-xs font-black">
+            <div className="pt-2 flex flex-wrap gap-4 items-center">
+              <div className="px-4 py-2.5 rounded-xl bg-blue-600/15 text-blue-300 border border-blue-600/30 text-xs font-black">
                 ⏱️ {t.threeSections.section3.actionText}
               </div>
-            </div>
-          </div>
-
-          {/* Right Column: High Converting Visual Mockup Card */}
-          <div className="lg:w-6/12 w-full">
-            <div className="p-8 rounded-3xl bg-slate-900 border-2 border-blue-500/40 shadow-2xl space-y-6">
-              <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-black">
-                  <Zap className="w-4 h-4" /> Google PageSpeed 99/100
-                </div>
-                <span className="text-xs font-extrabold text-blue-400 uppercase tracking-wider">AIDA Konversiya</span>
-              </div>
-
-              <div className="space-y-2">
-                <h4 className="text-2xl font-black text-white">Mijozlarni Haqiqiy Xaridorga Aylantiruvchi Lending</h4>
-                <p className="text-sm text-slate-300 leading-relaxed font-normal">
-                  Har bir sarlavha, vizual blok va tugma foydalanuvchini maqsadli harakatga (qo'ng'iroq qilish yoki buyurtma qoldirishga) undaydi.
-                </p>
-              </div>
-
-              {/* Lead Capture Simulation Box */}
-              <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
-                <div className="text-xs font-bold text-slate-300">📩 Avtomatik Lid Yig'ish Simulyatsiyasi:</div>
-                <div className="flex gap-2">
-                  <input 
-                    type="text" 
-                    placeholder="Ismingiz va Telefon raqamingiz..."
-                    className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-sm text-white focus:outline-none focus:border-blue-500"
-                    readOnly
-                    value="+998 91 951 73 35"
-                  />
-                  <a href="tel:+998919517335" className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-lg flex items-center justify-center transition-colors shadow-md shadow-blue-500/20">
-                    Yuborish
-                  </a>
-                </div>
-                <div className="text-xs text-blue-400 flex items-center gap-1.5 font-bold">
-                  <CheckCircle2 className="w-4 h-4" /> Telegram Bot & CRM ga 0.1 soniyada xabar boradi
-                </div>
+              <div className="px-4 py-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-black">
+                ⚡ Google PageSpeed 99/100
               </div>
             </div>
           </div>
