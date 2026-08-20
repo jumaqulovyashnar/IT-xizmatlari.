@@ -217,81 +217,48 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 2-CHI BO'LIM: MOBIL ILOVALAR (iOS & ANDROID MOBILE APPS)                  */}
       {/* ========================================================================= */}
-      <section id="section-mobile" className="py-24 px-4 bg-slate-900/60 border-t border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-12 items-center">
-          {/* Text & Features */}
-          <div className="lg:w-6/12 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              {t.threeSections.section2.title}
-            </h2>
-            <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-              {t.threeSections.section2.desc}
-            </p>
+      <section id="section-mobile" className="py-28 px-4 bg-slate-900/60 border-t border-b border-slate-800">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Mobile Application Information */}
+          <div className="lg:col-span-5 space-y-7">
+            <div className="space-y-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+                {t.threeSections.section2.title}
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                {t.threeSections.section2.desc}
+              </p>
+            </div>
 
-            <div className="space-y-3.5 pt-2">
+            <div className="space-y-4 pt-1">
               {t.threeSections.section2.features.map((feat, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
-                  <div className="p-1 rounded-full bg-blue-600 text-white mt-1 font-bold">
-                    <Check className="w-3.5 h-3.5" />
+                  <div className="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mt-0.5 shrink-0 font-bold">
+                    <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <span className="text-base font-semibold text-slate-100">{feat}</span>
+                  <span className="text-base font-semibold text-slate-200">{feat}</span>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4 flex flex-wrap gap-4 items-center">
+            <div className="pt-2 flex flex-wrap gap-4 items-center">
               <div className="px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-blue-300">
                 📱 Flutter • React Native • Swift • Kotlin
+              </div>
+              <div className="px-4 py-2.5 rounded-xl bg-blue-600/15 text-blue-300 border border-blue-600/30 text-xs font-black">
+                ⭐ App Store & Google Play
               </div>
             </div>
           </div>
 
-          {/* Stylized Mobile Device Mockup */}
-          <div className="lg:w-6/12 flex justify-center">
-            <div className="w-full max-w-sm rounded-[44px] border-4 border-slate-700 bg-slate-900 p-5 shadow-2xl relative overflow-hidden">
-              <div className="w-28 h-4 bg-slate-800 rounded-full mx-auto mb-4"></div>
-
-              <div className="space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-800">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-sm">
-                      IT
-                    </div>
-                    <div>
-                      <div className="text-sm font-extrabold text-white">IT Mobile App</div>
-                      <div className="text-xs text-slate-400">Online Servis</div>
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-bold">Faol</span>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-gradient-to-tr from-blue-700 via-blue-600 to-sky-500 text-white space-y-2 shadow-lg">
-                  <div className="text-xs font-black uppercase tracking-wider opacity-90">Boshqaruv</div>
-                  <div className="text-xl font-black">Mobil Buyurtmalar Markazi</div>
-                  <div className="text-xs opacity-95">Barcha to'lovlar va xizmatlar smartfoningizda.</div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1">
-                    <Smartphone className="w-6 h-6 mx-auto text-blue-400" />
-                    <div className="text-xs font-bold text-white">Push Bildirish</div>
-                  </div>
-                  <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1">
-                    <ShieldCheck className="w-6 h-6 mx-auto text-blue-400" />
-                    <div className="text-xs font-bold text-white">FaceID / PIN</div>
-                  </div>
-                  <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1">
-                    <Zap className="w-6 h-6 mx-auto text-blue-400" />
-                    <div className="text-xs font-bold text-white">Tezkor Savdo</div>
-                  </div>
-                  <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1">
-                    <TrendingUp className="w-6 h-6 mx-auto text-blue-400" />
-                    <div className="text-xs font-bold text-white">Statistika</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="w-32 h-1 bg-slate-700 rounded-full mx-auto mt-6"></div>
+          {/* Right Column: User's Exact Mobile App Showcase Image */}
+          <div className="lg:col-span-7 w-full">
+            <div className="rounded-3xl border-2 border-blue-500/40 bg-slate-900/90 shadow-2xl p-2 sm:p-3 overflow-hidden group hover:border-blue-400 transition-all duration-300">
+              <img 
+                src="/mobile-showcase.png" 
+                alt="Mobile App Showcase" 
+                className="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
