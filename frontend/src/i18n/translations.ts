@@ -26,31 +26,28 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        title: "E-Commerce va Zamonaviy Veb-Saytlar",
-        desc: "Kompaniyangiz mahsulot va xizmatlarini onlayn sotish uchun zamonaviy internet do'konlar, marketplace va korporativ veb-tizimlarni ishlab chiqamiz.",
-        tags: [
-          "Bosh sahifa (Homepage)",
-          "Mahsulot sahifasi (Product Detail)",
-          "Kategoriyalar va Filtrlar",
-          "Savatcha va To'lovlar (Cart)",
-          "100% Mobil Moslashuvchan"
-        ],
-        features: [
+        title: "Zamonaviy Web Saytlar va Katta Tizimlar",
+        desc: "Har qanday murakkablikdagi kengaytiriladigan korporativ veb-platformalar, xavfsiz va tezkor arxitektura.",
+        items: [
           {
-            title: "Online To'lov Tizimlari",
-            desc: "Payme, Click, Uzum, Visa va MasterCard to'lovlarini xavfsiz qabul qilish."
+            name: "E-Commerce (Internet Do'konlar)",
+            desc: "Payme, Click, Uzum to'lovlari, qulay savat, ombor va tovarlar hisobi, tezkor qidiruv.",
+            tag: "Savdo va Do'kon"
           },
           {
-            title: "Qulay Savatcha va Buyurtma",
-            desc: "Mijozlar uchun bir necha soniyada buyurtmani rasmiylashtirish imkoniyati."
+            name: "CRM va ERP Tizimlar",
+            desc: "Mijozlar bazasi, savdo voronkasi, xodimlar vazifalari va moliyaviy hisobotlarni avtomatlashtirish.",
+            tag: "Boshqaruv & Avtomatlashtirish"
           },
           {
-            title: "Omborxona va CRM Boshqaruvi",
-            desc: "1C buxgalteriya, tovarlar qoldig'i va mijozlar hisobini avtomatik yuritish."
+            name: "Korporativ Veb-Portallar",
+            desc: "Kompaniya imidjini oshiruvchi, ko'p tilli, interaktiv mijozlar shaxsiy kabineti bilan.",
+            tag: "Korporativ Imidj"
           },
           {
-            title: "Telegram Bot Bildirishnomalari",
-            desc: "Har bir yangi buyurtma haqida administratorlarga Telegram orqali xabar boradi."
+            name: "Maxsus Integratsiyalar va API",
+            desc: "1C buxgalteriya, Telegram botlar, SMS xabarnomalar va to'lov tizimlari bilan to'liq bog'lash.",
+            tag: "Integratsiyalar"
           }
         ]
       },
@@ -129,31 +126,28 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        title: "E-Commerce & Modern Websites",
-        desc: "We develop high-converting online stores, retail marketplaces, and robust web applications tailored for digital commerce.",
-        tags: [
-          "Homepage",
-          "Product Detail Page",
-          "Category Page & Filters",
-          "Cart & Checkout",
-          "100% Mobile Responsive"
-        ],
-        features: [
+        title: "Modern Websites & Enterprise Web Systems",
+        desc: "Scalable corporate web platforms, secure payment architectures, and responsive digital products.",
+        items: [
           {
-            title: "Online Payment Gateways",
-            desc: "Seamless Payme, Click, Stripe, Visa, and MasterCard checkout integrations."
+            name: "E-Commerce Platforms",
+            desc: "Payme, Click, Stripe checkout, cart, warehouse and inventory synchronization, lightning search.",
+            tag: "E-Commerce & Retail"
           },
           {
-            title: "Smart Shopping Cart",
-            desc: "Intuitive cart experience optimized for high conversion and low abandonment."
+            name: "CRM & ERP Systems",
+            desc: "Customer base, automated sales pipelines, task management, and executive financial dashboards.",
+            tag: "Enterprise ERP & CRM"
           },
           {
-            title: "Inventory & CRM Sync",
-            desc: "Automated warehouse, 1C ERP, and real-time customer data synchronization."
+            name: "Corporate Web Portals",
+            desc: "Multilingual, interactive customer accounts, and strong brand presence.",
+            tag: "Corporate Portal"
           },
           {
-            title: "Instant Telegram Alerts",
-            desc: "Immediate order notifications delivered straight to your team's Telegram bot."
+            name: "Custom Integrations & APIs",
+            desc: "1C ERP, Telegram bots, SMS gateways, and secure banking webhook connectors.",
+            tag: "API Integrations"
           }
         ]
       },
@@ -232,31 +226,28 @@ export const translations = {
     },
     threeSections: {
       section1: {
-        title: "E-Commerce и Современные Веб-Сайты",
-        desc: "Разрабатываем современные интернет-магазины, платформы онлайн-торговли и масштабируемые корпоративные веб-системы.",
-        tags: [
-          "Главная страница (Homepage)",
-          "Страница товара (Product Detail)",
-          "Категории и Умные фильтры",
-          "Корзина и Оплата (Cart)",
-          "100% Адаптивность под смартфоны"
-        ],
-        features: [
+        title: "Современные Веб-Сайты и Масштабные Системы",
+        desc: "Корпоративные платформы любой сложности, высокая безопасность, быстрая и отказоустойчивая архитектура.",
+        items: [
           {
-            title: "Онлайн Платежи",
-            desc: "Безопасный прием платежей через Payme, Click, Uzum, Visa и MasterCard."
+            name: "E-Commerce (Интернет-Магазины)",
+            desc: "Интеграция Payme, Click, корзина, учет склада и товаров, умный поиск.",
+            tag: "Онлайн Торговля"
           },
           {
-            title: "Удобная Корзина и Оформление",
-            desc: "Оформление заказа в несколько кликов с максимальной конверсией."
+            name: "CRM и ERP Системы",
+            desc: "База клиентов, воронка продаж, управление задачами сотрудников и финансовые отчеты.",
+            tag: "Автоматизация Бизнеса"
           },
           {
-            title: "Интеграция со Складом и 1С",
-            desc: "Автоматический учет остатков товаров и синхронизация клиентской базы."
+            name: "Корпоративные Веб-Порталы",
+            desc: "Многоязычные порталы с личным кабинетом клиентов и безупречным имиджем компании.",
+            tag: "Корпоративный Имидж"
           },
           {
-            title: "Оповещения в Telegram-бот",
-            desc: "Мгновенные уведомления о каждом новом заказе прямо в Telegram."
+            name: "Интеграции и API",
+            desc: "Связка с 1С, Telegram-ботами, SMS-шлюзами и банковскими системами.",
+            tag: "Интеграции"
           }
         ]
       },

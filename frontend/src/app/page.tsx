@@ -13,7 +13,6 @@ import {
   Globe2, 
   Cpu, 
   CheckCircle2, 
-  ArrowRight, 
   PhoneCall, 
   ShieldCheck, 
   MapPin, 
@@ -22,7 +21,7 @@ import {
   Check, 
   ChevronRight,
   TrendingUp,
-  Layers
+  BarChart3
 } from "lucide-react";
 
 export default function HomePage() {
@@ -67,7 +66,6 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 text-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-b border-slate-800/80">
-        {/* Glowing backdrop elements */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-5xl mx-auto space-y-8 relative z-10">
@@ -134,12 +132,12 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 1-CHI BO'LIM: E-COMMERCE VA ZAMONAVIY VEB-SAYTLAR                         */}
+      {/* 1-CHI BO'LIM: ZAMONAVIY WEB SAYTLAR VA KATTA TIZIMLAR                     */}
       {/* ========================================================================= */}
       <section id="section-websites" className="py-24 px-4 max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column: E-Commerce Info & Features */}
-          <div className="lg:w-6/12 space-y-6">
+          {/* Left Column: Stylized Computer Mockup & Intro */}
+          <div className="lg:w-5/12 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               {t.threeSections.section1.title}
             </h2>
@@ -147,132 +145,62 @@ export default function HomePage() {
               {t.threeSections.section1.desc}
             </p>
 
-            {/* Badges / Pill Tags (matching user template) */}
-            <div className="flex flex-wrap gap-2 pt-2">
-              {t.threeSections.section1.tags.map((tag, idx) => (
-                <span 
-                  key={idx} 
-                  className="px-3.5 py-1.5 rounded-full bg-slate-900 border border-blue-500/40 text-blue-300 text-xs font-bold flex items-center gap-1.5 shadow-sm"
-                >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* 4 Feature Items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
-              {t.threeSections.section1.features.map((feat, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                    <h4 className="text-sm font-bold text-white">{feat.title}</h4>
-                  </div>
-                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                    {feat.desc}
-                  </p>
+            {/* Stylized Laptop & Display Mockup (Oldingi Asl Mockup) */}
+            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative overflow-hidden">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-sky-400"></div>
                 </div>
-              ))}
+                <span className="text-xs font-mono text-slate-400">https://your-platform.uz</span>
+              </div>
+
+              <div className="py-6 space-y-3">
+                <div className="h-4 bg-blue-500/30 rounded w-3/4 animate-pulse"></div>
+                <div className="h-3 bg-slate-800 rounded w-full"></div>
+                <div className="h-3 bg-slate-800 rounded w-5/6"></div>
+                <div className="grid grid-cols-3 gap-2.5 pt-3">
+                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
+                    Payme / Click
+                  </div>
+                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
+                    CRM Tizimi
+                  </div>
+                  <div className="h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-300 text-xs font-bold text-center px-1">
+                    1C ERP Sync
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2 flex items-center justify-between text-xs font-bold text-slate-300">
+                <span>⚡ Next.js 14 & Node.js</span>
+                <span>🔒 100% SSL & Anti-DDoS</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: High-End Native Interactive E-Commerce UI Mockup */}
-          <div className="lg:w-6/12 w-full">
-            <div className="rounded-[32px] border-2 border-blue-500/40 bg-slate-900 shadow-2xl shadow-blue-500/20 overflow-hidden relative group">
-              {/* Browser Header Bar */}
-              <div className="px-5 py-3.5 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                </div>
-                <div className="px-4 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300 flex items-center gap-1.5 shadow-inner">
-                  <span className="text-emerald-400">🔒</span> https://shop-store.uz
-                </div>
-                <div className="flex items-center space-x-2 text-slate-400 text-xs">
-                  <ShoppingCart className="w-4 h-4 text-blue-400" />
-                  <span className="w-4 h-4 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center">3</span>
-                </div>
-              </div>
-
-              {/* Store Hero Banner */}
-              <div className="p-5 sm:p-6 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950/40 border-b border-slate-800 space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="font-black text-xl tracking-tighter text-white">SHOP.UZ</span>
-                  <div className="flex gap-3 text-xs font-semibold text-slate-300">
-                    <span className="hover:text-blue-400 cursor-pointer">Erkaklar</span>
-                    <span className="hover:text-blue-400 cursor-pointer">Ayollar</span>
-                    <span className="hover:text-blue-400 cursor-pointer">Brendlar</span>
+          {/* Right Column: 4 Sub-services Cards */}
+          <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {t.threeSections.section1.items.map((item, idx) => (
+              <div key={idx} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500 hover:shadow-xl transition-all duration-300 space-y-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-3.5 rounded-2xl bg-blue-500/15 text-blue-400">
+                    {idx === 0 && <ShoppingCart className="w-6 h-6" />}
+                    {idx === 1 && <Database className="w-6 h-6" />}
+                    {idx === 2 && <Globe2 className="w-6 h-6" />}
+                    {idx === 3 && <Cpu className="w-6 h-6" />}
                   </div>
-                </div>
-
-                <div className="py-3 space-y-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider">
-                    Yangi Kolleksiya 2026
+                  <span className="px-2.5 py-1 rounded-full bg-slate-800 text-blue-300 border border-slate-700 text-[11px] font-bold">
+                    {item.tag}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
-                    FIND CLOTHES THAT <br />
-                    <span className="text-blue-400">MATCHES YOUR STYLE</span>
-                  </h3>
-                  <p className="text-xs text-slate-300 max-w-sm font-normal">
-                    2,000+ dan ortiq original brend kiyimlari, poyabzal va aksessuarlar.
-                  </p>
                 </div>
-
-                {/* Brand Strip */}
-                <div className="pt-2 flex flex-wrap gap-4 items-center justify-between text-[11px] font-black uppercase tracking-widest text-slate-400 border-t border-slate-800/80">
-                  <span>VERSACE</span>
-                  <span>ZARA</span>
-                  <span>GUCCI</span>
-                  <span>PRADA</span>
-                  <span>CALVIN KLEIN</span>
-                </div>
+                <h3 className="text-xl font-bold text-white">{item.name}</h3>
+                <p className="text-sm text-slate-300 font-normal leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-
-              {/* Product Cards Grid inside Mockup */}
-              <div className="p-5 bg-slate-950 grid grid-cols-2 gap-4">
-                {/* Product 1 */}
-                <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 hover:border-blue-500/50 transition-all">
-                  <div className="h-28 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-4xl relative overflow-hidden">
-                    👕
-                    <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-blue-600 text-white text-[9px] font-bold">-20%</span>
-                  </div>
-                  <div className="font-bold text-xs text-white truncate">Graphic Cotton T-Shirt</div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-extrabold text-sm text-blue-400">180,000 UZS</span>
-                    <span className="text-[10px] text-amber-400 font-bold">★★★★★</span>
-                  </div>
-                  <button className="w-full py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-colors">
-                    Savatga qo'shish
-                  </button>
-                </div>
-
-                {/* Product 2 */}
-                <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2 hover:border-blue-500/50 transition-all">
-                  <div className="h-28 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-4xl relative overflow-hidden">
-                    👖
-                    <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[9px] font-bold">TOP</span>
-                  </div>
-                  <div className="font-bold text-xs text-white truncate">Skinny Fit Denim Jeans</div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-extrabold text-sm text-blue-400">320,000 UZS</span>
-                    <span className="text-[10px] text-amber-400 font-bold">★★★★★</span>
-                  </div>
-                  <button className="w-full py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-colors">
-                    Savatga qo'shish
-                  </button>
-                </div>
-              </div>
-
-              {/* Bottom Live Order Bar */}
-              <div className="p-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs font-bold text-slate-300">
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                  <span className="text-emerald-400">Payme / Click / Uzum</span> orqali 1-klikda to'lov
-                </span>
-                <span className="text-blue-400 font-extrabold">Next.js 14 Store</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -303,11 +231,6 @@ export default function HomePage() {
             </div>
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <a href="tel:+998919517335">
-                <Button className="gap-2 bg-blue-600 hover:bg-blue-500 text-white font-black text-base shadow-lg shadow-blue-500/30 border-0 h-12 px-6">
-                  Mobil Ilova Yaratish <ArrowRight className="w-5 h-5" />
-                </Button>
-              </a>
               <div className="px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-blue-300">
                 📱 Flutter • React Native • Swift • Kotlin
               </div>
@@ -317,10 +240,8 @@ export default function HomePage() {
           {/* Stylized Mobile Device Mockup */}
           <div className="lg:w-6/12 flex justify-center">
             <div className="w-full max-w-sm rounded-[44px] border-4 border-slate-700 bg-slate-900 p-5 shadow-2xl relative overflow-hidden">
-              {/* Notch */}
               <div className="w-28 h-4 bg-slate-800 rounded-full mx-auto mb-4"></div>
 
-              {/* Mobile App UI Screen */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2.5">
@@ -335,14 +256,12 @@ export default function HomePage() {
                   <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-bold">Faol</span>
                 </div>
 
-                {/* Mobile App Banner Card */}
                 <div className="p-5 rounded-2xl bg-gradient-to-tr from-blue-700 via-blue-600 to-sky-500 text-white space-y-2 shadow-lg">
                   <div className="text-xs font-black uppercase tracking-wider opacity-90">Boshqaruv</div>
                   <div className="text-xl font-black">Mobil Buyurtmalar Markazi</div>
                   <div className="text-xs opacity-95">Barcha to'lovlar va xizmatlar smartfoningizda.</div>
                 </div>
 
-                {/* 2x2 App Grid */}
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1">
                     <Smartphone className="w-6 h-6 mx-auto text-blue-400" />
@@ -363,7 +282,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Bottom Home Indicator */}
               <div className="w-32 h-1 bg-slate-700 rounded-full mx-auto mt-6"></div>
             </div>
           </div>
@@ -375,7 +293,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section id="section-landing" className="py-24 px-4 max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column: Details & Features */}
+          {/* Details & Features */}
           <div className="lg:w-6/12 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               {t.threeSections.section3.title}
@@ -396,11 +314,6 @@ export default function HomePage() {
             </div>
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <a href="tel:+998919517335">
-                <Button className="gap-2 bg-blue-600 hover:bg-blue-500 text-white font-black text-base shadow-lg shadow-blue-500/30 border-0 h-12 px-6">
-                  <Rocket className="w-5 h-5" /> Landing Page Buyurtma Berish
-                </Button>
-              </a>
               <div className="px-4 py-2.5 rounded-xl bg-blue-500/15 text-blue-300 border border-blue-500/30 text-xs font-black">
                 ⏱️ {t.threeSections.section3.actionText}
               </div>
