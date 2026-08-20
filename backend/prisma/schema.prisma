@@ -1,0 +1,149 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  SUPER_ADMIN
+  TECH_LEAD
+  ENGINEER
+  CLIENT_ADMIN
+  CLIENT_STAFF
+}
+
+enum ServiceCategory {
+  SOFTWARE
+  CLOUD
+  CYBERSECURITY
+  HELPDESK
+  NETWORK
+}
+
+enum BillingType {
+  ONE_TIME
+  HOURLY
+  MONTHLY_SUBSCRIPTION
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum TicketStatus {
+  OPEN
+  ASSIGNED
+  IN_PROGRESS
+  PENDING_CLIENT
+  RESOLVED
+  CLOSED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String    @map("password_hash")
+  fullName      String    @map("full_name")
+  phone         String?
+  role          Role      @default(CLIENT_STAFF)
+  companyId     String?   @map("company_id")
+  company       Company?  @relation(fields: [companyId], references: [id])
+  isActive      Boolean   @default(true) @map("is_active")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  createdTickets  Ticket[]        @relation("CreatedTickets")
+  assignedTickets Ticket[]        @relation("AssignedTickets")
+  comments        TicketComment[]
+
+  @@map("users")
+}
+
+model Company {
+  id           String         @id @default(uuid())
+  name         String
+  taxId        String?        @unique @map("tax_id")
+  address      String?
+  contactPhone String?        @map("contact_phone")
+  users        User[]
+  invoices     Invoice[]
+  createdAt    DateTime       @default(now()) @map("created_at")
+
+  @@map("companies")
+}
+
+model Service {
+  id          String          @id @default(uuid())
+  code        String          @unique
+  name        String
+  description String
+  category    ServiceCategory
+  basePrice   Decimal         @map("base_price") @db.Decimal(12, 2)
+  billingType BillingType     @map("billing_type")
+  isActive    Boolean         @default(true) @map("is_active")
+  createdAt   DateTime        @default(now()) @map("created_at")
+
+  @@map("services")
+}
+
+model Ticket {
+  id                 String          @id @default(uuid())
+  ticketNumber       String          @unique @map("ticket_number")
+  title              String
+  description        String
+  priority           Priority        @default(MEDIUM)
+  status             TicketStatus    @default(OPEN)
+  clientId           String          @map("client_id")
+  client             User            @relation("CreatedTickets", fields: [clientId], references: [id])
+  assignedEngineerId String?         @map("assigned_engineer_id")
+  assignedEngineer   User?           @relation("AssignedTickets", fields: [assignedEngineerId], references: [id])
+  slaDueDate         DateTime?       @map("sla_due_date")
+  resolvedAt         DateTime?       @map("resolved_at")
+  comments           TicketComment[]
+  createdAt          DateTime        @default(now()) @map("created_at")
+  updatedAt          DateTime        @updatedAt @map("updated_at")
+
+  @@map("tickets")
+}
+
+model TicketComment {
+  id             String   @id @default(uuid())
+  ticketId       String   @map("ticket_id")
+  ticket         Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  authorId       String   @map("author_id")
+  author         User     @relation(fields: [authorId], references: [id])
+  content        String
+  isInternalNote Boolean  @default(false) @map("is_internal_note")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@map("ticket_comments")
+}
+
+model Invoice {
+  id            String        @id @default(uuid())
+  invoiceNumber String        @unique @map("invoice_number")
+  companyId     String        @map("company_id")
+  company       Company       @relation(fields: [companyId], references: [id])
+  totalAmount   Decimal       @map("total_amount") @db.Decimal(12, 2)
+  status        InvoiceStatus @default(DRAFT)
+  dueDate       DateTime      @map("due_date")
+  paidAt        DateTime?     @map("paid_at")
+  paymentMethod String?       @map("payment_method")
+  createdAt     DateTime      @default(now()) @map("created_at")
+
+  @@map("invoices")
+}
