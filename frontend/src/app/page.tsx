@@ -41,15 +41,12 @@ export default function HomePage() {
       <header className="navbar bg-base-200/90 backdrop-blur border-b border-base-300 sticky top-0 z-50 px-4 sm:px-8">
         <div className="navbar-start">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-accent text-primary-content flex items-center justify-center font-black text-xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent text-primary-content flex items-center justify-center font-black text-xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
               <Laptop className="w-6 h-6" />
             </div>
             <div>
               <span className="font-black text-xl tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {t.brandName}
-              </span>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold opacity-60">
-                Software & IT Solutions
               </span>
             </div>
           </Link>
@@ -467,7 +464,7 @@ export default function HomePage() {
       <footer className="footer footer-center p-8 bg-base-300 text-base-content mt-auto border-t border-base-300">
         <div>
           <p className="font-bold text-sm">
-            © 2026 IT Xizmatlari Pro • Barcha huquqlar himoyalangan.
+            © 2026 IT Xizmatlari • Barcha huquqlar himoyalangan.
           </p>
           <p className="text-xs opacity-60">
             Veb-saytlar • Mobil Ilovalar • Landing Page • ITSM Helpdesk

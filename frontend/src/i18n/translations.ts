@@ -2,7 +2,7 @@ export type Language = 'uz' | 'en' | 'ru';
 
 export const translations = {
   uz: {
-    brandName: "IT Xizmatlari Pro",
+    brandName: "IT Xizmatlari",
     slogan: "SIFAT • ISHONCH • NATIJA",
     subSlogan: "BIRGA YUKSALAMIZ!",
     phone: "+998 91 951 73 35",
@@ -104,7 +104,7 @@ export const translations = {
   },
 
   en: {
-    brandName: "IT Services Pro",
+    brandName: "IT Services",
     slogan: "QUALITY • TRUST • RESULT",
     subSlogan: "LET'S GROW TOGETHER!",
     phone: "+998 91 951 73 35",
@@ -206,7 +206,7 @@ export const translations = {
   },
 
   ru: {
-    brandName: "IT Услуги Про",
+    brandName: "IT Услуги",
     slogan: "КАЧЕСТВО • ДОВЕРИЕ • РЕЗУЛЬТАТ",
     subSlogan: "РАСТЕМ ВМЕСТЕ!",
     phone: "+998 91 951 73 35",
