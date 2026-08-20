@@ -73,14 +73,14 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-5xl mx-auto space-y-8 relative z-10">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white drop-shadow-sm">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.22] sm:leading-[1.18] lg:leading-[1.15] text-white drop-shadow-sm pb-1">
             {t.hero.titleStart} <br />
             <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 bg-clip-text text-transparent font-black drop-shadow-[0_2px_20px_rgba(59,130,246,0.4)]">
               {t.hero.titleGradient}
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-200 font-normal leading-relaxed">
+          <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300/90 font-normal leading-[1.75] sm:leading-[1.8] tracking-normal">
             {t.hero.subtitle}
           </p>
 
