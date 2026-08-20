@@ -27,7 +27,7 @@ export const translations = {
     },
     projectsSection: {
       title: "Bizning Bajarilgan Loyihalar",
-      subtitle: "Biz yaratgan haqiqiy ishlayotgan muvaffaqiyatli loyihalar bilan tanishing. Ko'rish uchun kartochkaga bosing.",
+      subtitle: "Biznesingizni yuksaltirish uchun ishlab chiqilgan zamonaviy va samarali raqamli loyihalarimiz.",
       items: [
         {
           title: "Lotos Field Travel",
