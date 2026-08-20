@@ -310,7 +310,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 4-CHI BO'LIM: BIZNING LOYIHALAR (4 TA CARD 1 QATORDA - ULTRA KATTA EN)    */}
       {/* ========================================================================= */}
-      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto w-full border-t border-slate-800/80">
+      <section id="section-projects" className="py-28 px-4 sm:px-6 lg:px-8 max-w-[1720px] mx-auto w-full border-t border-slate-800/80">
         <div className="space-y-14">
           {/* Header */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
