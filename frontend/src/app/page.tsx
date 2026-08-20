@@ -62,11 +62,6 @@ export default function HomePage() {
               <Zap className="w-4 h-4" /> {t.nav.orderNow}
             </Button>
           </a>
-          <Link href="/admin">
-            <Button variant="outline" size="sm" className="border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white font-semibold">
-              {t.nav.admin}
-            </Button>
-          </Link>
         </div>
       </header>
 
