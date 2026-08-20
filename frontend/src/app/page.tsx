@@ -138,9 +138,6 @@ export default function HomePage() {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Column: Computer Mockup & Intro */}
           <div className="lg:w-5/12 space-y-6">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30 font-extrabold text-xs tracking-wider">
-              {t.threeSections.section1.badge}
-            </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               {t.threeSections.section1.title}
             </h2>
@@ -223,9 +220,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-12 items-center">
           {/* Text & Features */}
           <div className="lg:w-6/12 space-y-6">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30 font-extrabold text-xs tracking-wider">
-              {t.threeSections.section2.badge}
-            </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               {t.threeSections.section2.title}
             </h2>
@@ -319,9 +313,6 @@ export default function HomePage() {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Column: Details & Features */}
           <div className="lg:w-6/12 space-y-6">
-            <span className="inline-block px-3.5 py-1.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30 font-extrabold text-xs tracking-wider">
-              {t.threeSections.section3.badge}
-            </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               {t.threeSections.section3.title}
             </h2>
