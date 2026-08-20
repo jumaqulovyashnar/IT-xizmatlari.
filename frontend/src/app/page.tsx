@@ -57,17 +57,16 @@ export default function HomePage() {
             <li><a href="#section-websites" className="hover:text-primary transition-colors">{t.nav.web}</a></li>
             <li><a href="#section-mobile" className="hover:text-primary transition-colors">{t.nav.mobile}</a></li>
             <li><a href="#section-landing" className="hover:text-primary transition-colors">{t.nav.landing}</a></li>
-            <li><Link href="/portal" className="hover:text-primary transition-colors">{t.nav.portal}</Link></li>
           </ul>
         </div>
 
         <div className="navbar-end gap-3">
           <ThemeLanguageSwitcher />
-          <Link href="/portal">
+          <a href="tel:+998919517335">
             <Button size="sm" className="hidden sm:inline-flex shadow-md gap-2">
               <Zap className="w-4 h-4" /> {t.nav.orderNow}
             </Button>
-          </Link>
+          </a>
           <Link href="/admin">
             <Button variant="outline" size="sm">
               {t.nav.admin}
@@ -195,11 +194,11 @@ export default function HomePage() {
             </div>
 
             <div className="pt-2">
-              <Link href="/portal">
+              <a href="tel:+998919517335">
                 <Button className="gap-2 shadow-lg font-bold">
                   Web Loyiha Buyurtma Qilish <ArrowRight className="w-4 h-4" />
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -259,11 +258,11 @@ export default function HomePage() {
             </div>
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <Link href="/portal">
+              <a href="tel:+998919517335">
                 <Button variant="secondary" className="gap-2 shadow-lg font-bold">
                   Mobil Ilova Yaratish <ArrowRight className="w-4 h-4" />
                 </Button>
-              </Link>
+              </a>
               <div className="badge badge-outline text-xs font-semibold py-3 px-4">
                 📱 Flutter • React Native • iOS • Android
               </div>
@@ -355,11 +354,11 @@ export default function HomePage() {
             </div>
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <Link href="/portal">
+              <a href="tel:+998919517335">
                 <Button className="gap-2 shadow-lg font-bold bg-accent hover:bg-accent/90 text-accent-content">
                   <Rocket className="w-4 h-4" /> Landing Page Buyurtma Berish
                 </Button>
-              </Link>
+              </a>
               <div className="badge badge-warning text-xs font-bold py-3 px-4">
                 ⏱️ {t.threeSections.section3.actionText}
               </div>
