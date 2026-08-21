@@ -39,15 +39,15 @@ export function ThemeLanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-1.5 sm:gap-2.5">
+    <div className="flex items-center gap-1 sm:gap-2 shrink-0">
       {/* 1. Language Dropdown */}
       <div className={`relative ${isOpen ? "z-50" : ""}`}>
         <button 
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1.5 px-2.5 sm:px-3.5 h-9 sm:h-10 bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 rounded-full cursor-pointer text-xs font-bold transition-all shadow-sm"
+          className="flex items-center gap-1 px-2 sm:px-3 h-8 sm:h-9 bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 rounded-full cursor-pointer text-xs font-bold transition-all shadow-sm"
         >
-          <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-500 dark:text-blue-400 shrink-0" />
+          <Globe className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 shrink-0" />
           <span className="uppercase tracking-wider font-extrabold text-[11px] sm:text-xs">{language}</span>
         </button>
         {isOpen && (
@@ -96,12 +96,12 @@ export function ThemeLanguageSwitcher() {
         type="button"
         onClick={toggleDarkLight}
         title="Mavzuni almashtirish (Dark / Light)"
-        className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-blue-500 dark:text-blue-400 transition-all shadow-sm group hover:scale-105 shrink-0"
+        className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-blue-500 dark:text-blue-400 transition-all shadow-sm group hover:scale-105 shrink-0"
       >
         {theme === "light" ? (
-          <Sun className="w-4 h-4 text-amber-500 rotate-0 transition-transform" />
+          <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 rotate-0 transition-transform" />
         ) : (
-          <Moon className="w-4 h-4 text-blue-400 group-hover:-rotate-12 transition-transform" />
+          <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-400 group-hover:-rotate-12 transition-transform" />
         )}
       </button>
     </div>

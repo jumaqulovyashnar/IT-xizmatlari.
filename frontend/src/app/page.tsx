@@ -36,18 +36,16 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white transition-colors duration-300">
       {/* Navbar */}
-      <header className="bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 px-4 sm:px-8 lg:px-16 min-h-[68px] sm:min-h-[80px] flex items-center transition-colors duration-300">
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <header className="bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 px-3 sm:px-6 lg:px-16 min-h-[58px] sm:min-h-[72px] lg:min-h-[80px] flex items-center transition-colors duration-300">
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group shrink-0">
-            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg sm:text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform shrink-0">
-              <Laptop className="w-5 h-5 sm:w-6 sm:h-6" />
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group shrink-0 min-w-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-base sm:text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform shrink-0">
+              <Laptop className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <div>
-              <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
-                {t.brandName}
-              </span>
-            </div>
+            <span className="font-extrabold text-base sm:text-xl lg:text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors truncate">
+              {t.brandName}
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
@@ -85,7 +83,7 @@ export default function HomePage() {
           </nav>
 
           {/* Actions on Right */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <ThemeLanguageSwitcher />
             
             <a 
@@ -94,8 +92,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="hidden sm:inline-flex"
             >
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold shadow-lg shadow-blue-500/30 gap-2 border-0 h-10 px-4 sm:px-5 text-xs sm:text-sm hover:scale-105 transition-all">
-                <Zap className="w-4 h-4" /> {t.nav.orderNow}
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold shadow-lg shadow-blue-500/30 gap-2 border-0 h-9 sm:h-10 px-3.5 sm:px-5 text-xs sm:text-sm hover:scale-105 transition-all">
+                <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> {t.nav.orderNow}
               </Button>
             </a>
 
@@ -104,9 +102,9 @@ export default function HomePage() {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Menu"
-              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 transition-colors"
+              className="lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 transition-colors shrink-0"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
           </div>
         </div>
