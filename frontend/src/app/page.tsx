@@ -36,64 +36,70 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white transition-colors duration-300">
       {/* Navbar */}
-      <header className="bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 px-3 sm:px-6 lg:px-16 min-h-[58px] sm:min-h-[72px] lg:min-h-[80px] flex items-center transition-colors duration-300">
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group shrink-0 min-w-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-base sm:text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform shrink-0">
-              <Laptop className="w-4 h-4 sm:w-5 sm:h-5" />
-            </div>
-            <span className="font-extrabold text-base sm:text-xl lg:text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors truncate">
-              {t.brandName}
-            </span>
-          </Link>
+      <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4 sm:gap-6">
+          
+          {/* 1. Left Section: Logo / Brand */}
+          <div className="flex items-center shrink-0">
+            <Link 
+              href="/" 
+              className="flex items-center gap-2.5 sm:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl p-1"
+            >
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg sm:text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform shrink-0">
+                <Laptop className="w-5 h-5 sm:w-6 sm:h-6" />
+              </div>
+              <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors whitespace-nowrap">
+                {t.brandName}
+              </span>
+            </Link>
+          </div>
 
-          {/* Desktop Nav Links */}
+          {/* 2. Center Section: Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-[15px] font-bold">
             <a 
               href="#" 
-              className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
+              className="py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors whitespace-nowrap"
             >
               {t.nav.home}
             </a>
             <a 
               href="#section-websites" 
-              className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
+              className="py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors whitespace-nowrap"
             >
               {t.nav.web}
             </a>
             <a 
               href="#section-mobile" 
-              className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
+              className="py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors whitespace-nowrap"
             >
               {t.nav.mobile}
             </a>
             <a 
               href="#section-landing" 
-              className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
+              className="py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors whitespace-nowrap"
             >
               {t.nav.landing}
             </a>
             <a 
               href="#section-projects" 
-              className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
+              className="py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors whitespace-nowrap"
             >
               {t.nav.projects}
             </a>
           </nav>
 
-          {/* Actions on Right */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          {/* 3. Right Section: Action Controls */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <ThemeLanguageSwitcher />
             
             <a 
               href="https://t.me/yashnar" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex"
+              className="hidden md:inline-flex shrink-0"
             >
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold shadow-lg shadow-blue-500/30 gap-2 border-0 h-9 sm:h-10 px-3.5 sm:px-5 text-xs sm:text-sm hover:scale-105 transition-all">
-                <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> {t.nav.orderNow}
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold shadow-lg shadow-blue-500/30 gap-2 border-0 h-10 px-5 text-sm whitespace-nowrap hover:scale-105 transition-all">
+                <Zap className="w-4 h-4 shrink-0" /> {t.nav.orderNow}
               </Button>
             </a>
 
@@ -101,10 +107,11 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Menu"
-              className="lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 transition-colors shrink-0"
+              aria-label="Menyuni ochish (Toggle navigation menu)"
+              aria-expanded={mobileMenuOpen}
+              className="lg:hidden w-10 h-10 min-w-[40px] flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800/90 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 shrink-0"
             >
-              {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 shrink-0" /> : <Menu className="w-5 h-5 shrink-0" />}
             </button>
           </div>
         </div>
