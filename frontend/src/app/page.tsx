@@ -146,9 +146,9 @@ export default function HomePage() {
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative"
       >
         {/* Two-Column Industrial Grid matching exact 100% height */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
             <div className="space-y-4">
               <h2 
                 id="websites-heading"
@@ -186,9 +186,9 @@ export default function HomePage() {
 
           {/* Right Column: Precision Graphic Framed Showcase Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
+            <div className="relative h-full flex flex-col rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-full lg:min-h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/ecommerce-showcase.png" 
                   alt="E-Commerce Veb-Saytlar va Onlayn Do'konlar interfeysi namunalari" 
@@ -209,12 +209,12 @@ export default function HomePage() {
         aria-labelledby="mobile-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           {/* Left Column: Precision Graphic Framed Mobile Image (7 cols) */}
           <div className="lg:col-span-7 w-full order-2 lg:order-1">
-            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
+            <div className="relative h-full flex flex-col rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-full lg:min-h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/mobile-showcase.png" 
                   alt="Mobile App Showcase" 
@@ -226,7 +226,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 order-1 lg:order-2">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-6 order-1 lg:order-2">
             <div className="space-y-4">
               <h2 
                 id="mobile-heading"
@@ -272,9 +272,9 @@ export default function HomePage() {
         aria-labelledby="landing-heading"
         className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           {/* Left Column: Natural & Clean Typography with Structured Features (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
             <div className="space-y-4">
               <h2 
                 id="landing-heading"
@@ -312,9 +312,9 @@ export default function HomePage() {
 
           {/* Right Column: Precision Graphic Framed Landing Page Image (7 cols) */}
           <div className="lg:col-span-7 w-full">
-            <div className="relative rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
+            <div className="relative h-full flex flex-col rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-2 sm:p-2.5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 group shadow-xl dark:shadow-2xl">
               {/* Image Frame with Equal Height */}
-              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
+              <div className="relative w-full h-[460px] sm:h-[500px] lg:h-full lg:min-h-[530px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center">
                 <img 
                   src="/landing-showcase.png" 
                   alt="Landing Page Website Showcase" 
@@ -353,7 +353,7 @@ export default function HomePage() {
                 className="group rounded-3xl bg-white dark:bg-slate-900/90 border-2 border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-2 shadow-md dark:shadow-none"
               >
                 {/* Large Screenshot Image - 100% Fully Visible */}
-                <div className="w-full h-60 sm:h-68 lg:h-76 overflow-hidden bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800/80 p-3.5 flex items-center justify-center">
+                <div className="w-full h-60 sm:h-72 lg:h-80 overflow-hidden bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800/80 p-3.5 flex items-center justify-center">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
